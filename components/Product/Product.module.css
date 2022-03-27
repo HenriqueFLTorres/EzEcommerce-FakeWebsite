@@ -1,6 +1,14 @@
 .ProductSection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20vw);
+  margin: 0 auto;
+  margin-top: 10vh;
+
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 15vw));
+  grid-auto-rows: clamp(23rem, 25vw, 200rem);
+  justify-content: space-evenly;
+  gap: 5vw;
+  row-gap: 5%;
+
   border: 2px solid blue;
   width: 80vw;
 }
@@ -10,8 +18,12 @@
   flex-direction: column;
   align-items: center;
 
+  position: relative;
+  z-index: 30;
+  cursor: pointer;
+
   width: 100%;
-  height: 500px;
+  height: 85%;
 
   backdrop-filter: blur(1vw);
   -webkit-backdrop-filter: blur(1vw);
@@ -22,6 +34,14 @@
     rgba(255, 255, 255, 0.056)
   );
   border-radius: 0.65vw;
+
+  transition: transform 550ms ease, border-radius 550ms ease, height 550ms ease;
+}
+
+.cardRedirect {
+  height: 100%;
+  width: 100%;
+  transition: height 450ms ease;
 }
 
 .ProductCardImage {
@@ -66,15 +86,15 @@
 
   width: 100%;
   height: 50%;
-  border: 2px solid purple;
 
-  padding: 4%;
+  padding: 6%;
+
+  transition: transform 350ms ease;
 }
 
 .ProductCardInfo header,
 .ProductCardInfo footer {
   width: 100%;
-  border: 2px solid gold;
 }
 
 .ProductCard footer {
@@ -90,30 +110,37 @@
 }
 
 .ProductCardInfo .title {
-  font-size: clamp(0.1rem, 0.6vw + 1rem, 5rem);
+  height: 100%;
+  font-size: var(--step-0);
   font-weight: 700;
 }
 
 .ProductCardInfo .price {
-  font-size: clamp(0.1rem, 0.5vw + 1rem, 5rem);
+  font-size: var(--step-1);
   font-weight: 500;
 }
 .ProductCardInfo .originalPrice {
-  font-size: clamp(0.1rem, 0.2vw + 1rem, 5rem);
+  font-size: var(--step--1);
   text-decoration: line-through;
   font-weight: 400;
+
+  margin-left: 2%;
 }
 
 
 .ProductCardInfo .rate {
     width: 30%;
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--step--1);
 }
 
 .ProductCardInfo .fullBar,
 .ProductCardInfo .ratingBar {
     display: block;
     width: 100%;
-    height: 15px;
+    height: clamp(0.1rem, 1vw, 1rem);
+    margin-block: 10%;
 
     border-radius: 50vw;
 }
@@ -124,4 +151,48 @@
 
 .ProductCard .ratingBar {
     background: linear-gradient(90deg, rgba(248,184,78,1) 0%, rgba(194,134,36,1) 100%);
+}
+
+
+
+.ProductCard .addCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  background-color: #65449b;
+  cursor: pointer;
+
+  width: 100%;
+  height: 0%;
+
+  font-size: var(--step-0);
+  font-weight: 700;
+
+  transition: opacity 250ms, height 250ms, background-color 250ms;
+  transition-timing-function: ease-in;
+}
+
+.ProductCard:hover .addCart {
+  opacity: 1;
+  height: 15%;
+}
+
+.ProductCard:hover {
+  transform: scale(1.2, 1.2);
+  border-radius: .65vw .65vw 0 0;
+  height: 100%;
+}
+
+.ProductCard:hover .cardRedirect {
+  height: 85%;
+}
+
+.ProductCard:hover .ProductCardInfo {
+  /* transform: translateY(0%) scale(1.2, 1.2); */
+}
+
+.addCart:hover {
+  background-color: #7b5fa9;
 }

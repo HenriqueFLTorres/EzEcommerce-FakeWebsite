@@ -4,14 +4,13 @@ import Navbar from '../components/Navbar/Navbar'
 import ProductSection from '../components/Product/ProductSection'
 import Background from '../svg/Background'
 
-// import { fetchApi, baseUrl } from '../utils/fetchApi'
+import { fetchApi, baseUrl } from '../utils/fetchApi'
 
 export default function Home({ product }) {
 
   return (
     <div className="MainBackground">
       <Navbar/>
-      <Category/>
       <ProductSection product={product}/>
       <Background className="bgSvg"/>
     </div>
@@ -20,12 +19,12 @@ export default function Home({ product }) {
 
 
 
-// export async function getStaticProps() {
-//   const product = await fetchApi(`${baseUrl}/api/product`)
+export async function getStaticProps() {
+  const product = await fetchApi(`${baseUrl}/api/product`)
 
-//   return {
-//     props: {
-//       product: product,
-//     }
-//   }
-// }
+  return {
+    props: {
+      product: product,
+    }
+  }
+}
