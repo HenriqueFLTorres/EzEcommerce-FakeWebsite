@@ -1,0 +1,84 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 120px;
+  background-color: #1d1d1d;
+  box-shadow: 0 1vh 2vw rgba(14, 14, 14, 0.85);
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 50%;
+  height: 60%;
+}
+
+.Category,
+.Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  height: 100%;
+  width: 20%;
+  background-color: #65449b;
+}
+
+.Category {
+    border-top-left-radius: .5vw;
+    border-bottom-left-radius: .5vw;
+}
+
+.Search {
+    border-top-right-radius: .5vw;
+    border-bottom-right-radius: .5vw;
+}
+
+.SearchInput {
+    width: 67.5%;
+    height: 100%;
+
+    border: none;
+    background: linear-gradient(
+    180deg,
+    rgba(235, 235, 235, 1) 0%,
+    rgba(163, 163, 163, 1) 100%
+    );
+
+    padding: 3%;
+}
+
+.Search {
+  width: 12.5%;
+}
+
+.SearchIcon {
+    height: 60%;
+    width: auto;
+}
+
+.Settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80%;
+  width: 12%;
+
+  padding: 0.5%;
+}
+
+.UserIcon, .CartIcon {
+  height: 60%;
+  width: auto;
+}

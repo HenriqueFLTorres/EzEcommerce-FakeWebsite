@@ -1,16 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Noto Sans Display";
+  src: url(/styles/Fonts/NotoSansDisplay-Thin.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-ExtraLight.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-Light.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-Regular.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-Medium.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-SemiBold.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-Bold.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-ExtraBold.ttf) format(ttf),
+       url(/styles/Fonts/NotoSansDisplay-Black.ttf) format(ttf);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+.MainBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: #181818;
 }
