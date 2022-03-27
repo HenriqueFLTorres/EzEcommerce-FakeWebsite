@@ -7,7 +7,13 @@ import styles from './Product.module.css'
 const ProductCard = ({ title, image, price, id, rate }) => {
   return (
     <div className={styles.ProductCard}>
-      <Link href={`/product/${id}`} >
+      <Link href={{
+        pathname: "product/[id]",
+        query: {
+            title: price,
+        }
+        }}
+        as={`product/${id}`} >
         <div className={styles.cardRedirect}>
           <div className={styles.ProductCardImage}>
             <img className={styles.ImageView} src={image} alt={title} />
