@@ -1,8 +1,8 @@
 import React from 'react'
-import LogoDark from '../svg/LogoDark.svg'
-import SearchIcon from '../svg/SearchIcon.js'
-import User from '../svg/User.js'
-import Cart from '../svg/Cart.js'
+import LogoDark from '../../svg/LogoDark.svg'
+import SearchIcon from '../../svg/SearchIcon.js'
+import User from '../../svg/User.js'
+import Cart from '../../svg/Cart.js'
 import styles from './Navbar.module.css'
 
 import Image from 'next/image'
