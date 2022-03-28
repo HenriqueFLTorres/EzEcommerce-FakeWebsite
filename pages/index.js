@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar/>
       <ProductSection product={ProductsList}/>
       {/* <Shipping/> */}
-      {/* <Background className="bgSvg"/> */}
+      <Background className="bgSvg"/>
     </div>
   )
 }
