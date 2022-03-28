@@ -97,6 +97,16 @@
 }
 
 
+.options h6 {
+    color: #bb5050;
+
+    font-size: var(--step--2);
+    text-align: start;
+
+    width: 70%;
+    margin-top: -2%;
+}
+
 .options .bulletPoint {
     display: block;
     width: 1vw;
@@ -225,6 +235,6 @@
 
 .DeliveryCode div p {
     font-size: var(--step--1);
-    color: #a7a7a7;
+    color: #bb5050;
     margin-bottom: 2%;
 }

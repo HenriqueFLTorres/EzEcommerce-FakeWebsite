@@ -6,10 +6,11 @@ const ProductSection = ({ product }) => {
   return (
     <div className={styles.ProductSection}>
         {product?.map((productInfo) => {
-            const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = productInfo
+            const { name, price, category, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = productInfo
 
             return <ProductCard 
                       title={name}
+                      category={category}
                       id={product_id} 
                       rate={rating}
                       totalRating={total_ratings} 

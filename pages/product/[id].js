@@ -146,7 +146,7 @@ const ProductDetails = () => {
                 { ProductList.map((item) =>  {
                   const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
                   
-                  return description_images.map((image) => <img className={styles.productImage} src={image} alt={image}/>)
+                  return ( Number(router.query.id) === product_id ) && description_images.map((image) => <img className={styles.productImage} src={image} alt={image}/>)
                 })}
               </div>
               <div className={styles.moreInfo}>
@@ -154,14 +154,37 @@ const ProductDetails = () => {
                   const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
                   
                   return (
+                    ( Number(router.query.id) === product_id ) && (
                     <>
                       <div className={styles.bulletPoints}>
-                        { about_product.map((bulletPoint) => <p>{bulletPoint}</p> ) }
+                        <h1>More Info</h1>
+                        { about_product.map((bulletPoint) => <p>• {bulletPoint}</p> ) }
                       </div>
                       <div className={styles.specifications}>
-                      { specifications.map((item) => <p>{item}</p>) }
+                        <h1>Specifications</h1>
+                        { specifications.map((item) => <p>{item}</p>) }
+                      </div>
+                      <div className={styles.reviews}>
+                        <h1>Reviews</h1>
+                        { reviews.map((review) => {
+                          try {
+
+                            let parse = JSON.parse(review.message)
+                          } catch (error) {
+
+                          }
+                          return (
+
+                          <div className={styles.reviewFragment}>
+                            <h2>{review.title}</h2>
+                            <h5>{review.author} - <div className={styles.GoldHighlighted}>{review.rating}</div></h5>
+                            <p>{ review.message.replace('\n', "\n") }</p>
+                          </div>
+                          )
+                          })}
                       </div>
                     </>
+                    )
                   )
                 })}
               </div>
@@ -169,6 +192,9 @@ const ProductDetails = () => {
         </div>
         {/* <ProductDetails id={router.query.id}/> */}
         {/* <ProductReviews /> */}
+        <Background className={styles.bgSvg} />
+        <Background className={styles.bgSvg} />
+        <Background className={styles.bgSvg} />
         <Background className={styles.bgSvg} />
       </div>
     )

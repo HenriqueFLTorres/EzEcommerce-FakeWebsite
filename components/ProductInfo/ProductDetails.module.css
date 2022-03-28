@@ -1,6 +1,6 @@
 .bgSvg {
-    position: fixed;
-    z-index: -1;
+    position: absolute;
+    z-index: 0;
     
     margin: 0 auto;
     width: 120vw;
@@ -10,6 +10,23 @@
     filter: blur(2vw);
 }
 
+.bgSvg:nth-of-type(2) {
+    transform: scaleY(-1) translateY(-130%);
+}
+
+.bgSvg:nth-of-type(3) {
+    transform: translateY(260%);
+}
+
+.bgSvg:nth-of-type(4) {
+    transform: scaleY(-1) translateY(-390%);
+}
+
+
+.GoldHighlighted {
+    display: inline;
+    color: #F8B84E;
+}
 
 .productHeader {
     display: flex;
@@ -30,8 +47,8 @@
     box-shadow: 0.5vw 0.5vw 3vw rgba(22, 22, 22, 0.775);
     background-image: linear-gradient(
       150deg,
-      rgba(255, 255, 255, 0.248),
-      rgba(255, 255, 255, 0.056)
+      rgba(87, 87, 87, 0.207),
+      rgba(16, 16, 16, 0.056)
     );
     border-radius: 0.65vw;
 }
@@ -388,14 +405,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    position: relative;
+    z-index: 20;
+
+
     width: 90vw;
-    height: 100vh;
+    height: auto;
 
 
     margin: 0 auto;
     padding-top: 10vh;
+    border-radius: 1vw;
 
-    background-color: #1d1d1d;
+    background-color: #1d1d1dad;
 }
 
 .aboutProduct {
@@ -403,15 +426,22 @@
     flex-direction: row;
     justify-content: center;
 
-    border: 2px solid purple;
+    margin-top: 10vh;
+
     width: 90%;
     height: 100%;
 }
 
-.descriptionImages {
-    width: 50%;
 
-    border: 2px solid gold;
+
+
+
+
+
+
+
+.descriptionImages {
+    width: 40%;
 }
 
 .productImage {
@@ -419,7 +449,51 @@
 }
 
 .moreInfo {
-    width: 50%;
+    width: 60%;
+}
 
-    border: 2px solid gold;
+
+
+.bulletPoints, .specifications, .reviews {
+    margin-block: 5%;
+    padding: 5%;
+
+    text-align: justify;
+    line-height: 140%;
+}
+
+.bulletPoints h1, .specifications h1, .reviews h1 {
+    font-size: var(--step-2);
+    margin-bottom: 5vh;
+}
+
+.bulletPoints p {
+    font-size: var(--step--2);
+}
+
+
+
+
+
+
+
+
+
+.reviews h2 {
+    font-size: var(--step--1);
+    font-weight: 600;
+
+    margin-bottom: 2.5%;
+}
+
+
+
+
+.reviews .reviewFragment {
+    margin-block: 10%;
+}
+
+
+.reviewFragment p {
+    white-space: pre-line;
 }

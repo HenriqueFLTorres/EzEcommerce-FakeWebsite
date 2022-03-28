@@ -5,6 +5,7 @@
     {
 
         "name": "2020 Apple MacBook Air Laptop: Apple M1 Chip, 13” Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad",
+        "category": "Computers",
         "product_id": 1,
         "rating": "4.8 of 5",
         "total_ratings": 13802,
@@ -30,26 +31,26 @@
             "Why Mac - Easy to learn. Easy to set up. Astoundingly powerful. Intuitive. Packed with apps to use right out of the box. Mac is designed to let you work, play, and create like never before.",
             "Simply Compatible - All your existing apps work, including Adobe Creative Cloud, Microsoft 365, and Google Drive. Plus you can use your favorite iPhone and iPad apps directly on macOS. Altogether you'll have access to the biggest collection of apps ever for Mac. All available on the App Store.",
             "Easy to Learn - If you already have an iPhone, MacBook Air feels familiar from the moment you turn it on. And it works perfectly with all your Apple devices. Use your iPad to extend the workspace of your Mac, answer texts and phone calls directly on your Mac, and more.",
-            "Fanless Design – Your MacBook Air stays cool and runs quietly even while tackling intense workloads.",
-            "AppleCare – Every Mac comes with a one-year limited warranty and up to 90 days of complimentary technical support. Get AppleCare+ to extend your coverage and reduce the stress and cost of unexpected repairs.",
-            "Environmentally Friendly – MacBook Air is made with a 100% recycled aluminum enclosure and uses less energy for a smaller carbon footprint."
+            "Fanless Design - Your MacBook Air stays cool and runs quietly even while tackling intense workloads.",
+            "AppleCare - Every Mac comes with a one-year limited warranty and up to 90 days of complimentary technical support. Get AppleCare+ to extend your coverage and reduce the stress and cost of unexpected repairs.",
+            "Environmentally Friendly - MacBook Air is made with a 100% recycled aluminum enclosure and uses less energy for a smaller carbon footprint."
         ],
 
 
         "specifications": [
-            "Model Name: MacBook Air",
-            "Brand: Apple",
-            "Specific Uses For Product: Multimedia, Personal, Business",
-            "Screen Size: 13.3 Inches",
-            "Operating System: Mac OS",
-            "Human Interface Input: Keyboard",
-            "CPU Manufacturer: Apple",
-            "Graphics Card Description: Integrated",
-            "Color: Gold",
-            "Connectivity Technology: Bluetooth, Wi-Fi, Bluetooth 5.0"
+            "Model Name - MacBook Air",
+            "Brand - Apple",
+            "Specific Uses For Product - Multimedia, Personal, Business",
+            "Screen Size - 13.3 Inches",
+            "Operating System - Mac OS",
+            "Human Interface Input - Keyboard",
+            "CPU Manufacturer -  Apple",
+            "Graphics Card Description - Integrated",
+            "Color - Gold",
+            "Connectivity Technology - Bluetooth, Wi-Fi, Bluetooth 5.0"
         ],
         "options": {
-            "capacity": [ "256GB", "512GB" ]
+            "capacity": [ "256 GB", "512 GB" ]
         },
 
 
@@ -82,6 +83,99 @@
                 "author": "JJ",
                 "rating": "5.0 of 5",
                 "message": "No complains so far. Very fast and performs great. I had a 2014 MacBook Air and finally upgraded this year. This is leagues beyond that entry and I’m very happy with this upgrade."
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+    
+    {
+
+        "name": "2021 Apple MacBook Pro (14-inch, Apple M1 Pro chip with 8‑core CPU and 14‑core GPU, 16GB RAM, 512GB SSD) - Space Gray",
+        "category": "Computers",
+        "product_id": 123423,
+        "rating": "4.7 of 5",
+        "total_ratings": 461,
+        "original_price": null,
+        "price": 1999.00,
+        "in_stock": true,
+        "main_image": "https://m.media-amazon.com/images/I/61vFO3R5UNL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61vFO3R5UNL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71YhRQy50oL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61JqllsE+DL._AC_SX522_.jpg",
+            "https://m.media-amazon.com/images/I/81wxI2w9K9L._AC_SX522_.jpg",
+            "https://m.media-amazon.com/images/I/818mB1ifjfL._AC_SX522_.jpg",
+            "https://m.media-amazon.com/images/I/61P2ynHwgHL._AC_SX522_.jpg"
+        ],
+
+
+        "about_product": [
+            "Apple M1 Pro or M1 Max chip for a massive leap in CPU, GPU, and machine learning performance",
+            "Up to 10-core CPU delivers up to 3.7x faster performance to fly through pro workflows quicker than ever",
+            "Up to 32-core GPU with up to 13x faster performance for graphics-intensive apps and games",
+            "16-core Neural Engine for up to 11x faster machine learning performance",
+            "Longer battery life, up to 17 hours",
+            "Up to 64GB of unified memory so everything you do is fast and fluid.",
+            "Up to 8TB of superfast SSD storage launches apps and opens files in an instant",
+            "Stunning 14-inch Liquid Retina XDR display with extreme dynamic range and contrast ratio.",
+            "AppleCare - Every Mac comes with a one-year limited warranty and up to 90 days of complimentary technical support. Get AppleCare+ to extend your coverage and reduce the stress and cost of unexpected repairs1080p FaceTime HD camera with advanced image signal processor for sharper video calls.",
+            "Six-speaker sound system with force-cancelling woofers"
+        ],
+
+
+        "specifications": [
+            "Model Name - MacBook Pro",
+            "Brand - Apple",
+            "Specific Uses For Product - Multimedia, Gaming, Business",
+            "Screen Size - 14.2 Inches",
+            "Operating System - Mac OS",
+            "CPU Manufacturer -  Apple",
+            "Graphics Card Description - Integrated",
+            "Color - Space Gray",
+            "Connectivity Technology - Bluetooth, Wi-Fi",
+            "Hard Disk Size - 512 GB"
+        ],
+        "options": {
+            "capacity": [ "512 GB", "1 TB" ]
+        },
+
+
+        "description_images": [
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_01._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_02._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_03._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_04._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_05._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_06._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_07._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_08._CB639392504_.jpg",
+            "https://m.media-amazon.com/images/G/01/apple/MacBook_Pro_14-in_16-in_Product_Page_L__en-US_09._CB639387059_.jpg"
+        ],
+        "reviews": [
+            {
+                "title": "14' MacBook Pro vs. 13' MacBook Pro",
+                "author": "Ian VINE VOICE",
+                "rating": "5.0 of 5",
+                "message": "I am writing this review focused primarily on people who are considering jumping from the 13' MacBook Pro to the 14' MacBook Pro, which is what I did. I moved from the 13' MacBook Pro M1 with 16gb of RAM to the 14' MacBook Pro M1 Pro with 16gb of RAM.\n\n Size: So, 1' of screen might not seem like a lot on its face, but the difference is pretty substantial, in my opinion. Even the pictures don't quite do it justice. The screen feels considerably larger in a package that isn't considerably larger. For me, it's the perfect sweet spot for someone who wants something larger than the 13' model, but smaller than the 16'. I had a 16' MacBook Pro i9 and it was just too much for me. This one feels perfect. \n\n Form Factor: The new 14' and 16' MacBooks both adopt a thicker chassis, which is shown in the pictures. As such, Apple decided to make the casing flat instead of gently rounded. It honestly reminds me of the pre-unibody builds, but still sleek and modern. If I didn't know this one was new and you just laid them side-by-side, I might say that the old form factor looks a little newer, but that isn't to say that it looks bad.\n\n Aesthetics: Overall, I touched on the aesthetics a bit in the 'form factor' section. It looks like a high-end laptop, but at the same time I can see some people thinking it looks dated. I personally like the flatter look over the more rounded look, but it will depend on the person. Another thing I like is moving the 'MacBook Pro' branding from under the screen to the bottom of the casing. I just think it provides a cleaner look during use. The black background of the keyboard is also a plus for me. The old space gray background was fine, but I really like the black."
+            },
+            {
+                "title": "Remarkable",
+                "author": "Charlie Carlisle",
+                "rating": "5.0 of 5",
+                "message": "I haven't upgraded my computer for more than a decade, so it would stand to reason any recent releases would impress me, but this macbook pro has gone above and beyond in the small time I've had it. \n\n The screen is truly something to behold. Smooth, clear, just beautiful. I don't typically care about bezels, but I might start. The expanded screen makes an unexpected difference. Meanwhile, I barely notice the notch. Apple said they'd find workarounds to make it scarce, and they have.\n\nThe speakers are wonderful as well. I was skeptical at first -- thought I caught some tinny effects on a couple songs, but the more I listen to them, the more I'm convinced the tinniness was in the recording (it was a live album, which might explain it). As for the spatial audio, I've only heard a couple songs, but it's pretty trippy. This is my first experience with it, and it doesn't disappoint.\n\n In the short time I've had the computer, it's been nothing but fast. Probably more computer than I need, so if you're a sound editor or photographer, this review probably isn't for you. But for those of you casual users who want a solid machine that will last (as I said, my last macbook pro made it more than a decade), this is the one. Excited as I was for my last macbook, I could see room for improvement at the time. Right now, I don't see how things get better than this."
+            },
+            {
+                "title": "Best MacBook Pro ever - for a lot of reasons",
+                "author": "Jake",
+                "rating": "5.0 of 5",
+                "message": "M1 pro chip is super powerful - photo/video editing, graphic design - this thing just kills it. Compared to previous MacBook Pro, it's a giant leap ahead. These tasks are a main reason to buy the pro version of the Macbook. This particularly model is the lower end of the spec you can get for a pro, but it still kicks butt. You can get the Pro Max chip and bump up the RAM to 64GB if you want - and add tons more storage. The 14 inch MacBook pro is the perfect size for a balance of portability and power. It can do pretty much everything the 16 inch version does. The display is stunning. Just gorgeous. 120hz capability (pro motion) gets rid of blur when scrolling and makes for clearer action when viewing movies. The brightness and black levels on the display are awesome. Real HDR viewing - a big difference. You will hear about 'the notch' at the top of the screen where the camera is. After 10 minutes I don't even notice it. It means nothing for your experience. Its just something critics have chosen to harp about. in most apps the notch is no even visible. Camera is now a full 1080p and is a big upgrade over previous MacBooks. Six speaker sound system with new woofers - sounds incredible. Music/movies it feels like surround sound. For video conferencing the microphones are studio quality and you can tell - this is great for video conferencing. The keyboard is a dream to type on. Very solid like all MacBooks, no spongy feel you get with so many other laptops. The Apple Magic Keyboard is the best - as is the track pad. Battery life is amazing. I have gone all day on battery without needing to plug in. At best its spec says 17 hours, which is crazy! Especially for this spec...but for real world use with a mix of tasks, it won't be 17 hours but I did a 9 hour session yesterday, and still had a ton of battery left. The power efficiency is ground breaking. They have added back the MagSafe power plug - which is great! And added back an SD card slot and and an HDMI port - which many of us hated the previous macs that deleted these ports. I wish it had at least one USB-A old style port - but it doesn't. You get three USB-C thunderbolt 4 ports that you can use with adapters if needed. They got rid of the touch screen bar at the top of the keyboard from previous pro MacBooks and put back the regular mechanical keys for the controls. Apparently they listened to a lot of users who didn't really like the touch pad. The shape and style of this laptop is great. Some say the edge of the laptop looks 'sharp' where your wrists rest. That is BS. I have been typing most of the day and I don't feel any issue with the edge of the laptop at all. Very comfy for typing. Some haters may try to find reasons to bash this new Macbook Pro, but I am telling you - from any perspective, all brand bias aside - this is an amazing laptop - the best Apple has ever made, hands down. And I would say you won't find a better power laptop anywhere. All that said - this is not a gamers machine. Apple is not for hard core gamers. I mean you can play games on it that you get from the app store. I am a hard core gamer and a PC geek - I have a powerful windows PC for gaming. And always will. But for everything else. this MacBook is king. I use to for music, for photo and video editing, for productivity. I can plut into a giant monitor if I want a bigger screen - it works great on my 34 inch IPS panel. So if you are wondering if this Macbook 14 inch pro is the real deal or not - I am here to tell you, its the real deal. I finally upgraded from my 2015 MacBook pro because this new one hits so many sweet spots - revolutionary power and battery life, excellent ergonomic design, great sound, stunning display - its the whole package. If you are thinking of getting one - you won't be disappointed. One last comment. I am an old timer windows guy, and I know all the counter arguments for the Mac. Many wills say this is overpriced compared to a windows laptop with similar spec. First, show me an intel based laptop that can match these new M1 Pro chips - you can't. And aside from that, the Mac OS is secure and stable - rock solid - and is intuitive with amazing features - like the ability to copy and paste text FROM A PHOTO! Whaaat? And the design/ergonomics/quality of these MacBooks is unmatched. So, yes you pay more - but you get more. My last MacBook pro lasted me almost 7 years and it still works great. If you want this laptop - get it! It rocks."
             }
         ]
     }

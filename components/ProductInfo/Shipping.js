@@ -48,13 +48,14 @@ const Shipping = () => {
                             <p className={optionActivated(index)}>{option}</p>
                         </div>
                     )) }
+                    <h6>Required for Continue</h6>
                 </div> 
                 
             </div>
             <div className={styles.DeliveryCode}>
                 <header><House className={styles.SVGIcon}/>Delivery Destination</header>
                 <div>
-                    <p>Postal Code</p>
+                    <p>Required for Continue</p>
                     <input className={styles.postalCode} placeholder="XX-XXX-XX" onChange={(input) => setPostalCode( checkMax(input.target.value) )} value={postalCode} type="number" />
                 </div>
             </div>

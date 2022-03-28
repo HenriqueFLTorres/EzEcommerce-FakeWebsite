@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './Product.module.css'
 
 
-const ProductCard = ({ title, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews }) => {
+const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews }) => {
 
   return (
     <div className={styles.ProductCard}>
@@ -24,7 +24,8 @@ const ProductCard = ({ title, image, price, id, rate, oPrice, stock, images, abo
           <div className={styles.ProductCardInfo}>
 
             <header>
-              <h4 className={styles.title}>{title}</h4>
+              <h4 className={styles.title}>{title.substring(0, 40)}</h4>
+              <h6 className={styles.category}>{category}</h6>
             </header>
 
             <footer>
