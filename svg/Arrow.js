@@ -9,7 +9,7 @@ const Arrow = (props) => (
   >
     <path
       fill="none"
-      stroke="#fff"
+      stroke="#CECECE"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}

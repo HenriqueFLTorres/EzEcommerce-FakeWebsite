@@ -36,18 +36,18 @@
         ],
 
 
-        "specifications": {
-            "Model Name": "MacBook Air",
-            "Brand": "Apple",
-            "Specific Uses For Product": "Multimedia, Personal, Business",
-            "Screen Size": "13.3 Inches",
-            "Operating System": "Mac OS",
-            "Human Interface Input": "Keyboard",
-            "CPU Manufacturer": "Apple",
-            "Graphics Card Description": "Integrated",
-            "Color": "Gold",
-            "Connectivity Technology": "Bluetooth, Wi-Fi, Bluetooth 5.0"
-        },
+        "specifications": [
+            "Model Name: MacBook Air",
+            "Brand: Apple",
+            "Specific Uses For Product: Multimedia, Personal, Business",
+            "Screen Size: 13.3 Inches",
+            "Operating System: Mac OS",
+            "Human Interface Input: Keyboard",
+            "CPU Manufacturer: Apple",
+            "Graphics Card Description: Integrated",
+            "Color: Gold",
+            "Connectivity Technology: Bluetooth, Wi-Fi, Bluetooth 5.0"
+        ],
         "options": {
             "capacity": [ "256GB", "512GB" ]
         },

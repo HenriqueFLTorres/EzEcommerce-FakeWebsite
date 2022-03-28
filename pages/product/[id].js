@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { useRouter } from 'next/router'
 
 import Navbar from '../../components/Navbar/Navbar';
+import Shipping from '../../components/ProductInfo/Shipping'
 import ProductReviews from '../../components/ProductInfo/ProductReviews';
 
 import Arrow from '../../svg/Arrow.js'
@@ -21,12 +22,15 @@ const ProductDetails = () => {
   const router = useRouter()
 
 
-  const handleValue = (value) => {
+  const handleValue = (value, min, max) => {
     let newValue = value
-    if ( newValue < 0 ) newValue = 0
-    else if ( newValue > 20 ) newValue = 20
+    if ( newValue < min ) newValue = min
+    else if ( newValue > max ) newValue = max
     return newValue
   }
+
+  const arrowActivated = (rotation) => classNames( { [styles.option + rotation + Activated]: clicked } )
+  
 
     return (
       <div className="MainBackground">
@@ -34,11 +38,11 @@ const ProductDetails = () => {
         { ProductList.map((item) =>  {
         const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
 
+
         return (
         ( Number(router.query.id) === product_id ) && (
-
-
-          <header className={styles.productHeader} key={product_id} >
+          
+          <header className={styles.productHeader} >
             <div className={styles.title}>{name}</div>
             <div className={styles.mainProductInfo}>
 
@@ -67,9 +71,37 @@ const ProductDetails = () => {
                       </div>
 
                       <div className={styles.selectAmount}>
-                        <Arrow className={styles.arrow} onClick={() => setItemValue(  handleValue(itemValue - 1)  )}/>
+                        <Arrow className={styles.arrow} onClick={(e) => {
+                          setItemValue( handleValue(itemValue - 1, 0, 20) )
+                          if ( e.target.tagName === "path" ) {
+                            e.target.parentNode.classList.add(styles.ActivatedLeft)
+                            setTimeout(() => {
+                              e.target.parentNode.classList.remove(styles.ActivatedLeft)
+                            }, 250);
+                          } 
+                          else {
+                            e.target.classList.add(styles.ActivatedLeft)
+                            setTimeout(() => {
+                              e.target.classList.remove(styles.ActivatedLeft)
+                            }, 250);
+                          }
+                        }}/>
                         <input value={itemValue} readOnly={true}/>
-                        <Arrow className={styles.arrow} onClick={() => setItemValue(  handleValue(itemValue + 1)  )}/>
+                        <Arrow className={styles.arrow} onClick={(e) => {
+                          setItemValue( handleValue(itemValue + 1, 0, 20) )
+                          if ( e.target.tagName === "path" ) {
+                            e.target.parentNode.classList.add(styles.ActivatedRight)
+                            setTimeout(() => {
+                              e.target.parentNode.classList.remove(styles.ActivatedRight)
+                            }, 250);
+                          } 
+                          else {
+                            e.target.classList.add(styles.ActivatedRight)
+                            setTimeout(() => {
+                              e.target.classList.remove(styles.ActivatedRight)
+                            }, 250);
+                          }
+                        }}/>
                       </div>
 
                       <button className={styles.addCart}>Add to Cart</button>
@@ -106,6 +138,35 @@ const ProductDetails = () => {
 
 
         )) }) }
+
+        <div className={styles.aboutSection}>
+            <Shipping/>
+            <div className={styles.aboutProduct}>
+              <div className={styles.descriptionImages}>
+                { ProductList.map((item) =>  {
+                  const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
+                  
+                  return description_images.map((image) => <img className={styles.productImage} src={image} alt={image}/>)
+                })}
+              </div>
+              <div className={styles.moreInfo}>
+                { ProductList.map((item) =>  {
+                  const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
+                  
+                  return (
+                    <>
+                      <div className={styles.bulletPoints}>
+                        { about_product.map((bulletPoint) => <p>{bulletPoint}</p> ) }
+                      </div>
+                      <div className={styles.specifications}>
+                      { specifications.map((item) => <p>{item}</p>) }
+                      </div>
+                    </>
+                  )
+                })}
+              </div>
+            </div>
+        </div>
         {/* <ProductDetails id={router.query.id}/> */}
         {/* <ProductReviews /> */}
         <Background className={styles.bgSvg} />

@@ -6,7 +6,7 @@
     position: relative;
     z-index: 20;
 
-    width: 90vw;
+    width: 90%;
     height: 40vh;
 
     margin: 0 auto;
@@ -50,7 +50,7 @@
 
     height: 20%;
 
-    font-size: var(--step-2);
+    font-size: var(--step-1);
     font-weight: 600;
 }
 
@@ -68,7 +68,7 @@
 
 
 .DeliveryInfo p {
-    font-size: var(--step-0);
+    font-size: var(--step--1);
 }
 
 
@@ -88,7 +88,7 @@
 
 .option p {
     margin-left: 1vw;
-    font-size: var(--step-0);
+    font-size: var(--step--1);
     color: #a7a7a7;
 
     transition: color, font-weight;
@@ -147,10 +147,30 @@
     outline: none;
 
     color: #1d1d1d;
+    background-color: #CECECE;
+    border: none;
+    border-radius: .25vw;
+
     font-weight: 600;
     font-size: var(--step-0);
+
+    transition: background-color 350ms ease;
 }
 
+.postalCode::placeholder {
+    color: #bdbdbd;
+}
+
+.postalCode:focus {
+    background-color: #ffffff;
+}
+
+.subButtom {
+    width: 100%;
+    height: 15%;
+
+    text-decoration: none;
+}
 
 .submitButtom {
     display: flex;
@@ -158,11 +178,14 @@
     align-items: center;
 
     width: 100%;
-    height: 15%;
+    height: 100%;
 
     color: #1d1d1d;
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     font-weight: 600;
+
+    cursor: pointer;
+    user-select: none;
 
     animation-name: hide, opacityReverse;
     animation-duration: 250ms;
@@ -201,7 +224,7 @@
 }
 
 .DeliveryCode div p {
-    font-size: var(--step-0);
+    font-size: var(--step--1);
     color: #a7a7a7;
     margin-bottom: 2%;
 }

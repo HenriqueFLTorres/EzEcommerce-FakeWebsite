@@ -59,9 +59,11 @@ const Shipping = () => {
                 </div>
             </div>
         </div>
-        <div className={submitBuy()}>
-            Finish Buy
-        </div>
+        <a className={styles.subButtom} href="https://htportfolio.vercel.app/" target="_blank">
+            <div className={submitBuy()}>
+                Finish Buy
+            </div>
+        </a>
     </section>
   )
 }
