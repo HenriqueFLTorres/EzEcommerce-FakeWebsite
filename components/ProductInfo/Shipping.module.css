@@ -67,6 +67,11 @@
 }
 
 
+.DeliveryInfo p {
+    font-size: var(--step-0);
+}
+
+
 
 
 
@@ -127,12 +132,16 @@
     from { opacity: 0 }
     to { opacity: 1 }
 }
+@keyframes opacityReverse {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
 
 
 
 .postalCode {
     width: 80%;
-    height: 20%;
+    height: 30%;
 
     text-align: center;
     outline: none;
@@ -150,11 +159,17 @@
 
     width: 100%;
     height: 15%;
-    opacity: 0;
+    opacity: ;
 
     color: #1d1d1d;
     font-size: var(--step-1);
     font-weight: 600;
+
+    animation-name: hide, opacityReverse;
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 
     background: linear-gradient(180deg, #E0E0E0 0%, rgba(211, 211, 211, 0.46) 100%);
     border-radius: 0px 0px 10px 10px;
@@ -172,4 +187,22 @@
 @keyframes appear {
     from { transform: scale(0, 1); }
     to { transform: scale(1, 1); }
+}
+
+@keyframes hide {
+    from { transform: scale(1, 1); }
+    to { transform: scale(0, 1); }
+}
+
+
+
+.DeliveryCode div {
+    height: 70%;
+    transform: translateY(-10%);
+}
+
+.DeliveryCode div p {
+    font-size: var(--step-0);
+    color: #a7a7a7;
+    margin-bottom: 2%;
 }

@@ -5,22 +5,25 @@ import styles from './Product.module.css'
 const ProductSection = ({ product }) => {
   return (
     <div className={styles.ProductSection}>
-        {/* {product?.docs.map((productInfo) => {
-            const { product_title, app_sale_price, product_id, evaluate_rate, product_main_image_url } = productInfo
+        {product?.map((productInfo) => {
+            const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = productInfo
 
-            return <ProductCard title={product_title} image={product_main_image_url} price={app_sale_price} id={product_id} rate={evaluate_rate} />
-        })} */}
-        {/* <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" />
-        <ProductCard title="Iphone Pro Max 12" image="https://m.media-amazon.com/images/I/41kBmL3zaZL._AC_SX679_.jpg" price={5200} id={423} rate="4.4 out 5 stars" /> */}
+            return <ProductCard 
+                      title={name}
+                      id={product_id} 
+                      rate={rating}
+                      totalRating={total_ratings} 
+                      image={main_image} 
+                      price={price} 
+                      oPrice={original_price}
+                      stock={in_stock}
+                      images={images}
+                      about={about_product}
+                      specifications={specifications}
+                      options={options}
+                      descImages={description_images}
+                      reviews={reviews} />
+        })}
     </div>
   )
 }

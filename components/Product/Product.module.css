@@ -7,7 +7,7 @@
   grid-auto-rows: clamp(23rem, 25vw, 200rem);
   justify-content: space-evenly;
   gap: 5vw;
-  row-gap: 5%;
+  row-gap: 2%;
 
   border: 2px solid blue;
   width: 80vw;
@@ -27,7 +27,7 @@
 
   backdrop-filter: blur(1vw);
   -webkit-backdrop-filter: blur(1vw);
-  box-shadow: 0 0.25vw 1vw 0 rgba(41, 41, 43, 0.83);
+  box-shadow: 0.5vw 0.5vw 1vw 0 rgba(10, 10, 10, 0.85);
   background-image: linear-gradient(
     150deg,
     rgba(255, 255, 255, 0.248),
@@ -111,7 +111,7 @@
 
 .ProductCardInfo .title {
   height: 100%;
-  font-size: var(--step-0);
+  font-size: var(--step--1);
   font-weight: 700;
 }
 
@@ -189,9 +189,6 @@
   height: 85%;
 }
 
-.ProductCard:hover .ProductCardInfo {
-  /* transform: translateY(0%) scale(1.2, 1.2); */
-}
 
 .addCart:hover {
   background-color: #7b5fa9;

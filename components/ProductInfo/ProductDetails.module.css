@@ -1,0 +1,136 @@
+.productHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 90vw;
+    height: 100vh;
+
+    padding: 2.5%;
+
+    backdrop-filter: blur(1vw);
+    -webkit-backdrop-filter: blur(1vw);
+    box-shadow: 0.5vw 0.5vw 1vw 0 rgba(10, 10, 10, 0.85);
+    background-image: linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.248),
+      rgba(255, 255, 255, 0.056)
+    );
+    border-radius: 0.65vw;
+}
+
+.title {
+    font-size: var(--step-2);
+    font-weight: 600;
+}
+
+
+.mainProductInfo {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    width: 40%;
+    margin-top: 5%;
+}
+
+
+.mainImageContainer {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 47.5vh;
+    background-color: #fff;
+    border-radius: 1vw;
+    
+    
+    clip-path: inset(0 0 0 0);
+
+}
+
+.selectedImage {
+    position: relative;
+
+    width: 100%;
+    object-fit: contain;
+    z-index: 5;
+    border-radius: 1vw;
+
+    animation-name: appear;
+    animation-duration: 450ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.selectedImageBlur {
+    position: absolute;
+    width: 40%;
+    height: 50vh;
+
+    filter: blur(1.5vw);
+    z-index: 1;
+    border-radius: 8vw;
+
+    animation-name: appear;
+    animation-duration: 450ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    from { 
+        transform: translateX(-100%); 
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(0%); 
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+.tinyImagesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    height: 20%;
+    width: 100%;
+}
+
+.tinyImageFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 15%;
+    height: 80%;
+
+    border-radius: .3vw;
+
+    background-color: #fff;
+}
+
+.tinyImages {
+    width: 100%;
+    object-fit: contain;
+
+    border-radius: .3vw;
+}

@@ -4,13 +4,14 @@ import Link from 'next/link'
 import styles from './Product.module.css'
 
 
-const ProductCard = ({ title, image, price, id, rate }) => {
+const ProductCard = ({ title, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews }) => {
+
   return (
     <div className={styles.ProductCard}>
       <Link href={{
         pathname: "product/[id]",
         query: {
-            title: price,
+            id: id,
         }
         }}
         as={`product/${id}`} >
@@ -28,11 +29,11 @@ const ProductCard = ({ title, image, price, id, rate }) => {
 
             <footer>
               <div className={styles.prices}>
-                <p className={styles.originalPrice}>$ {price - 1000}</p>
+                { oPrice && <p className={styles.originalPrice}>$ {oPrice}</p> }
                 <p className={styles.price}>$ {price}</p>
               </div>
               <div className={styles.rate}>
-                <p>{rate}</p>
+                <p>{rate.replace(/(\s+stars)/g, '').replace(/(\s+out\s+)/g, '').replace(/of/g, ' of')}</p>
                 <span className={styles.fullBar}>
                   {/* match function to get the avaliation rate and set the size accoarding */}
                   <span className={styles.ratingBar} style={{ width: `${Number(rate.match(/(\w\.\w)/g)) / 5 * 100}%` }}></span>

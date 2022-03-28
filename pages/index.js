@@ -3,30 +3,16 @@ import Category from '../components/Category'
 import Navbar from '../components/Navbar/Navbar'
 import ProductSection from '../components/Product/ProductSection'
 import Background from '../svg/Background'
-import Shipping from '../components/ProductInfo/Shipping.js'
 
-// import { fetchApi, baseUrl } from '../utils/fetchApi'
+import ProductsList from '../utils/Products.json'
 
-export default function Home({ product }) {
-
+export default function Home() {
   return (
     <div className="MainBackground">
       <Navbar/>
-      {/* <ProductSection product={product}/> */}
-      <Shipping/>
-      <Background className="bgSvg"/>
+      <ProductSection product={ProductsList}/>
+      {/* <Shipping/> */}
+      {/* <Background className="bgSvg"/> */}
     </div>
   )
 }
-
-
-
-// export async function getStaticProps() {
-//   const product = await fetchApi(`${baseUrl}/api/product`)
-
-//   return {
-//     props: {
-//       product: product,
-//     }
-//   }
-// }

@@ -5,12 +5,15 @@ import User from '../../svg/User.js'
 import Cart from '../../svg/Cart.js'
 import styles from './Navbar.module.css'
 
+import Link from 'next/link'
 import Image from 'next/image'
 
 const Navbar = () => {
   return (
     <div className={styles.Navbar}>
-        <Image src={LogoDark} alt="Logo" width={150} height={200}/>
+      <Link href="/">
+        <Image src={LogoDark} alt="Logo" width={150} height={200} style={{ cursor: "pointer" }}/>
+      </Link>
         <div className={styles.SearchBar}>
           <div className={styles.Category}>All Categories</div>
           <input className={styles.SearchInput} type={styles.search} />

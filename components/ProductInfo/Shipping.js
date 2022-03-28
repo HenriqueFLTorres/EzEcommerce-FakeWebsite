@@ -54,6 +54,7 @@ const Shipping = () => {
             <div className={styles.DeliveryCode}>
                 <header><House className={styles.SVGIcon}/>Delivery Destination</header>
                 <div>
+                    <p>Postal Code</p>
                     <input className={styles.postalCode} placeholder="XX-XXX-XX" onChange={(input) => setPostalCode( checkMax(input.target.value) )} value={postalCode} type="number" />
                 </div>
             </div>
