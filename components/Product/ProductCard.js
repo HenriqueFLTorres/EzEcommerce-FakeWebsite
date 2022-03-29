@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Product.module.css'
 
 
-const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews }) => {
+const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews, filter }) => {
 
-  return (
+  useEffect(() => {
+    console.log("piru");
+  }, [filter])
+  console.log(filter["Lowest Price"]);
+
+  return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"])  && (
     <div className={styles.ProductCard}>
       <Link href={{
         pathname: "product/[id]",
@@ -46,6 +51,7 @@ const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, i
       </Link>
       <div className={styles.addCart}>Add to Cart</div>
     </div>
+  )
   )
 }
 

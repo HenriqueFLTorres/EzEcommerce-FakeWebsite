@@ -3,6 +3,9 @@
   margin: 0 auto;
   margin-top: 10vh;
 
+  position: relative;
+  z-index: 20;
+
   grid-template-columns: repeat(auto-fit, minmax(15rem, 15vw));
   grid-auto-rows: clamp(23rem, 25vw, 200rem);
   justify-content: space-evenly;

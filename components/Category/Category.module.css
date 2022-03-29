@@ -1,6 +1,12 @@
 .categoryBar {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
+    position: relative;
+    z-index: 20;
+
+    text-align: center;
 
     position: fixed;
 
@@ -10,7 +16,26 @@
     width: 20%;
     height: 80vh;
 
+    padding-top: 2%;
     margin-top: 10vh;
 
     transform: translateX(-35vw);
+}
+
+.categoriesFilter {
+    width: 100%;
+}
+
+.categoriesFilter p {
+    width: 100%;
+    background-color: rgb(39, 73, 73);
+
+    font-size: var(--step-2);
+}
+
+
+
+
+.DragPriceLow, .DragPriceHigh {
+    
 }

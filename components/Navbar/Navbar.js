@@ -8,8 +8,7 @@ import styles from './Navbar.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Navbar = ({ setSearch }) => {
-  const [position, setPosition] = useState()
+const Navbar = () => {
 
   return (
     <div className={styles.Navbar}>

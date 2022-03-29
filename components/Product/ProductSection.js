@@ -2,13 +2,14 @@ import React from 'react'
 import ProductCard from './ProductCard';
 import styles from './Product.module.css'
 
-const ProductSection = ({ product }) => {
+const ProductSection = ({ product, filter }) => {
   return (
     <div className={styles.ProductSection}>
         {product?.map((productInfo) => {
             const { name, price, category, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = productInfo
 
             return <ProductCard 
+                      key={product_id}
                       title={name}
                       category={category}
                       id={product_id} 
@@ -23,7 +24,9 @@ const ProductSection = ({ product }) => {
                       specifications={specifications}
                       options={options}
                       descImages={description_images}
-                      reviews={reviews} />
+                      reviews={reviews}
+                      filter={filter}
+                      />
         })}
     </div>
   )

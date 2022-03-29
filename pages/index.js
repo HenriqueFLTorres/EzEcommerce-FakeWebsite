@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import react, { useState, useEffect } from 'react'
 
 import Category from '../components/Category/Category'
 import Navbar from '../components/Navbar/Navbar'
@@ -7,16 +7,19 @@ import Background from '../svg/Background'
 
 import ProductsList from '../utils/Products.json'
 
-export default function Home() {
-  const [search, setSearch] = ('')
+const category = Array.from( new Set ( ProductsList.map((item) => item.category) ) )
 
-  console.log(search);
+
+export default function Home() {
+  const [filter, setFilter] = useState([''])
+
+
   return (
     <div className="MainBackground">
-      <Navbar setSearch={setSearch}/>
-      <div className='Content'>
-        <Category/>
-        <ProductSection product={ProductsList}/>
+      <Navbar/>
+      <div className='Content' >
+        <Category filter={filter} setFilter={setFilter}/>
+        <ProductSection product={ProductsList} filter={filter}/>
       </div>
       <Background className="bgSvg"/>
     </div>
