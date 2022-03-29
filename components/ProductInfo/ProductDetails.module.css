@@ -37,7 +37,7 @@
     z-index: 50;
     
     width: 90vw;
-    height: 80vh;
+    height: 100vh;
 
     padding: 2.5%;
     margin: 7% auto;
@@ -54,7 +54,11 @@
 }
 
 .title {
-    font-size: var(--step--1);
+    width: 80%;
+
+    text-align: center;
+
+    font-size: var(--step-1);
     font-weight: 600;
 }
 
@@ -65,14 +69,17 @@
     justify-content: space-between;
     padding-inline: 4%;
 
+    width: 100%;
+    height: 100%;
+
 }
 
 
 .images {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    height: 90%;
+    align-items: center;
+    height: 80%;
     width: 40%;
     margin-top: 5%;
 }
@@ -83,7 +90,7 @@
     justify-content: center;
 
     width: 100%;
-    height: 40.5vh;
+    height: 80%;
     background-color: #fff;
     border-radius: 1vw;
     
@@ -110,17 +117,19 @@
 .selectedImageBlur {
     position: absolute;
     width: 40%;
-    height: 40vh;
+    height: 58%;
 
     filter: blur(1.5vw);
     z-index: 1;
-    border-radius: 8vw;
+    border-radius: 4vw;
 
     animation-name: appear;
     animation-duration: 450ms;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    transition: opacity 350ms ease;
 }
 
 @keyframes appear {
@@ -172,8 +181,9 @@
 }
 
 .tinyImages {
-    width: 100%;
     object-fit: contain;
+    width: 100%;
+    height: 100%;
 
     border-radius: .3vw;
 }
@@ -190,7 +200,7 @@
     justify-content: space-between;
 
     width: 55%;
-    height: 90%;
+    height: 80%;
     padding: 1%;
     border-radius: 1vw;
 
@@ -233,7 +243,7 @@
 
 
 .itemPrice h2 {
-    font-size: var(--step--2);
+    font-size: var(--step-0);
     font-weight: 400;
 
     text-decoration: line-through;
@@ -241,7 +251,7 @@
 }
 
 .itemPrice h3 {
-    font-size: var(--step-1);
+    font-size: var(--step-3);
     font-weight: 400;
 }
 
@@ -251,7 +261,7 @@
 }
 
 .productAwards p {
-    font-size: var(--step--2);
+    font-size: var(--step-0);
     text-align: center;
 }
 
@@ -264,7 +274,8 @@
     justify-content: center;
 
     width: 100%;
-    margin-top: 40%;
+    margin-top: auto;
+    margin-bottom: 15%;
     gap: 5%;
 }
 
@@ -272,7 +283,7 @@
     width: 5vw;
     height: 2.5vw;
 
-    font-size: var(--step-0);
+    font-size: var(--step-2);
     font-weight: 600;
     color: #1d1d1d;
 
@@ -326,7 +337,7 @@
     border-radius: .5vw;
     
     color: #ffffff;
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     font-weight: 700;
     background-color: #1d1d1d;
     
@@ -355,7 +366,7 @@
 
     text-align: center;
     font-weight: 400;
-    font-size: var(--step--1);
+    font-size: var(--step-1);
 }
 
 .productBuy .fullBar,
@@ -453,6 +464,11 @@
 }
 
 
+.bulletPoints p {
+    margin-bottom: 2%;
+}
+
+
 
 .bulletPoints, .specifications, .reviews {
     margin-block: 5%;
@@ -463,12 +479,12 @@
 }
 
 .bulletPoints h1, .specifications h1, .reviews h1 {
-    font-size: var(--step-2);
+    font-size: var(--step-4);
     margin-bottom: 5vh;
 }
 
 .bulletPoints p {
-    font-size: var(--step--2);
+    font-size: var(--step-0);
 }
 
 
@@ -480,7 +496,7 @@
 
 
 .reviews h2 {
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     font-weight: 600;
 
     margin-bottom: 2.5%;

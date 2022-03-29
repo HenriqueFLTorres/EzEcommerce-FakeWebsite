@@ -10,25 +10,20 @@ import DeliveryOptions from './DeliveryOptions.json'
 import styles from './Shipping.module.css'
 
 const Shipping = () => {
-    const [option, setOption] = useState(null)
+    const [companyOption, setCompanyOption] = useState(null)
     const [postalCode, setPostalCode] = useState('')
     const [acceptForm, setAcceptForm] = useState(false)
 
     let maxInputValue = 7
-    const bulletPointsClass = (index) => classNames( [styles.bulletPoint], { [styles.bulletActive]: option === index } )
-    const optionActivated = (index) => classNames( { [styles.optionActivated]: option === index } )
+    const bulletPointsClass = (index) => classNames( [styles.bulletPoint], { [styles.bulletActive]: companyOption === index } )
+    const optionActivated = (index) => classNames( { [styles.optionActivated]: companyOption === index } )
     const submitBuy = () => classNames( [styles.submitButtom], { [styles.submitButtomActive]: acceptForm } )
 
-    console.log(acceptForm);
-    const checkMax = input => {
-        if ( ( input.length >= maxInputValue) && option ) setAcceptForm(true)
-        else setAcceptForm(false)
-        return input.slice(0, maxInputValue)
-    }
 
     useEffect(() => {
-        
-    })
+        if ( ( postalCode.length >= maxInputValue) && companyOption ) setAcceptForm(true)
+        else setAcceptForm(false)
+    }, [companyOption, postalCode])
 
   return (
     <section className={styles.ShippingContainer}>
@@ -44,7 +39,7 @@ const Shipping = () => {
                 <div className={styles.options}>
                     { DeliveryOptions.map((option, index) => (
                         <div key={index} className={styles.option}>
-                            <span className={bulletPointsClass(index)} onClick={() => setOption(index)} />
+                            <span className={bulletPointsClass(index)} onClick={() => companyOption === index ? setCompanyOption(null) : setCompanyOption(index) } />
                             <p className={optionActivated(index)}>{option}</p>
                         </div>
                     )) }
@@ -56,7 +51,7 @@ const Shipping = () => {
                 <header><House className={styles.SVGIcon}/>Delivery Destination</header>
                 <div>
                     <p>Required for Continue</p>
-                    <input className={styles.postalCode} placeholder="XX-XXX-XX" onChange={(input) => setPostalCode( checkMax(input.target.value) )} value={postalCode} type="number" />
+                    <input className={styles.postalCode} placeholder="XX-XXX-XX" onChange={(input) => setPostalCode( input.target.value.slice(0, maxInputValue) )} value={postalCode} type="number" />
                 </div>
             </div>
         </div>

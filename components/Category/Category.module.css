@@ -1,0 +1,16 @@
+.categoryBar {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+
+    background-color: #65449b;
+    border-radius: 1vw;
+    
+    width: 20%;
+    height: 80vh;
+
+    margin-top: 10vh;
+
+    transform: translateX(-35vw);
+}

@@ -56,6 +56,11 @@
   filter: blur(30px);
 }
 
+.Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 input::-webkit-outer-spin-button,
