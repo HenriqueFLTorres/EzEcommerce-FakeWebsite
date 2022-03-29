@@ -11,7 +11,7 @@ const category = Array.from( new Set ( ProductsList.map((item) => item.category)
 
 
 export default function Home() {
-  const [filter, setFilter] = useState([''])
+  const [filter, setFilter] = useState({["Category"]: category})
 
 
   return (

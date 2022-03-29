@@ -10,7 +10,7 @@
 
     position: fixed;
 
-    background-color: #65449b;
+    background-color: #41414159;
     border-radius: 1vw;
     
     width: 20%;
@@ -23,19 +23,114 @@
 }
 
 .categoriesFilter {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
+    height: 10%;
+    
+    gap: 20%;
+    margin-bottom: 20%;
 }
 
 .categoriesFilter p {
     width: 100%;
-    background-color: rgb(39, 73, 73);
+}
 
+
+.categoryItem {
+    font-size: var(--step-1);
+    color: #bbbbbb;
+    cursor: pointer;
+
+    transition: color 350ms ease, font-size 350ms ease;
+}
+
+.categoryItem.Active {
     font-size: var(--step-2);
+    color: #ffffff;
+}
+
+
+.priceFilter {
+    width: 80%;
+}
+
+
+.LowestPrice, .HighestPrice, .Ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 15% 0;
+
+    height: 40%;
+}
+
+.Ratings {
+    height: 15%;
+
+    margin-block: auto;
+}
+
+
+.LowestPrice h3, .HighestPrice h3, .Ratings h3 {
+    font-size: var(--step-1);
+}
+
+.LowestPrice h6, .HighestPrice h6, .Ratings h6 {
+    font-size: var(--step-1);
+    font-weight: 400;
 }
 
 
 
 
-.DragPriceLow, .DragPriceHigh {
-    
+
+
+
+
+
+
+
+
+
+.DragPriceLow, .DragPriceHigh, .DragRating {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #1d1d1d;
+
+    border-radius: 20vw;
+
+    outline: none; /* Remove outline */
+}
+
+.DragPriceLow:hover, .DragPriceHigh:hover, .DragRating:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.DragPriceLow::-webkit-slider-thumb, .DragPriceHigh::-webkit-slider-thumb, .DragRating::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 100%;
+
+    background: #65449b;
+    cursor: pointer; 
+}
+
+.DragRating::-webkit-slider-thumb {
+    background: rgb(211, 151, 54);
+}
+  
+.DragPriceLow::-moz-range-thumb, .DragPriceHigh::-moz-range-thumb, .DragRating::-moz-range-thumb  {
+    width: 1.5vw;
+    height: 1.5vw;
+    background: #65449b;
+    cursor: pointer;
 }

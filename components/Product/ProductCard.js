@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Product.module.css'
@@ -6,12 +6,8 @@ import styles from './Product.module.css'
 
 const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews, filter }) => {
 
-  useEffect(() => {
-    console.log("piru");
-  }, [filter])
-  console.log(filter["Lowest Price"]);
 
-  return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"])  && (
+  return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"]) &&  filter["Category"].includes(category) && ( Number(rate.replace(/\s+of\s+\d/g, '')) > filter["Lowest Rating"] ) && (
     <div className={styles.ProductCard}>
       <Link href={{
         pathname: "product/[id]",
@@ -39,7 +35,7 @@ const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, i
                 <p className={styles.price}>$ {price}</p>
               </div>
               <div className={styles.rate}>
-                <p>{rate.replace(/(\s+stars)/g, '').replace(/(\s+out\s+)/g, '').replace(/of/g, ' of')}</p>
+                <p>{rate}</p>
                 <span className={styles.fullBar}>
                   {/* match function to get the avaliation rate and set the size accoarding */}
                   <span className={styles.ratingBar} style={{ width: `${Number(rate.match(/(\w\.\w)/g)) / 5 * 100}%` }}></span>

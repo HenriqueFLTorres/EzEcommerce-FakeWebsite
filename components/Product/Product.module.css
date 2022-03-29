@@ -2,6 +2,7 @@
   display: grid;
   margin: 0 auto;
   margin-top: 10vh;
+  margin-bottom: 20vh;
 
   position: relative;
   z-index: 20;
@@ -12,8 +13,8 @@
   gap: 5vw;
   row-gap: 2%;
 
-  border: 2px solid blue;
   width: 65vw;
+
 
   transform: translateX(12.5vw);
 }
