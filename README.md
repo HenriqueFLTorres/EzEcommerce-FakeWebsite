@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Ez Commerce Website (Fake Ecommerce)</h1>
+<br/><br/>
+<p align="center">
+  <img width="40%" src="https://user-images.githubusercontent.com/96752883/160670848-33d7e92d-1125-4fb1-a7a3-1aaf36c86acd.svg#gh-dark-mode-only" alt="Logo"/>
+  <img width="40%" src="https://user-images.githubusercontent.com/96752883/160670850-7291d5de-bd3c-470f-9452-534431bb853f.svg#gh-light-mode-only" alt="Logo"/>
+</p>
+<br/><br/>
+<p align="center">You can access the website clicking <a href="https://ezecommerce.vercel.app/">here</a> <p>
+<br/><br/>
 
-## Getting Started
+## Technologies Used 🧠
 
-First, run the development server:
+### ⌨️ Languages/Others<br/>
+CSS (Pure)<br/>
+JavaScript
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### 📚 Library <br/>
+ReactJS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ⚙️ Frameworks <br/>
+Next.js
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 📦 Packages
+Classnames
+<br/><br/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Here are some previews 🖥️
+<br/><br/>
+<p align="center">
+  <img width="40%" src="https://i.imgur.com/CmiX6g9.png" alt="Website Image"/>
+  <img width="40%" src="https://i.imgur.com/w6txGeD.png" alt="Website Image"/>
+  <img width="40%" src="https://i.imgur.com/UKmxlS4.png" alt="Website Image"/>
+  <img width="40%" src="https://i.imgur.com/17ODvzt.png" alt="Website Image"/>
+  <img width="40%" src="https://i.imgur.com/81JNzle.png" alt="Website Image"/>
+  <img width="40%" src="https://i.imgur.com/Pth8tLW.png" alt="Website Image"/>
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br/><br/>
 
-## Learn More
+## Updates 🎉
+  
+  #### V1.0 - Launch
+  
+  There is a lot to be added, but the user already can filter by price, category, or even rating. Since I chose to not use an API, all items need to be added by hand, but even with that difficulty, each item has a review section, specifications, about, and image carrousel...
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br/><br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Goals 🏆
+  - Add more products
+  - Add cart functionality
+  - Add more pages
+  - Search by name?!?
 
-## Deploy on Vercel
+  
+<br/><br/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">
+  <img width="30%" src="https://user-images.githubusercontent.com/96752883/158870016-66ce131c-d517-4aac-bad0-ca522fd3733c.png">
+</p>
+<h3 align="center">Developed and Designed by <a href="https://htportfolio.vercel.app/">Henrique Torres</a><h3>
+
