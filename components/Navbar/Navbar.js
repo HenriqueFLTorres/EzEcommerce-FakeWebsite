@@ -7,8 +7,13 @@ import styles from './Navbar.module.css'
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useCart } from '../../Hooks/CartHook'
 
 const Navbar = () => {
+
+  const [cart, cartUpdater] = useCart()
+
+  console.log(cart["3"]);
 
   return (
     <div className={styles.Navbar}>
@@ -32,6 +37,7 @@ const Navbar = () => {
         <div className={styles.Settings}>
           <User className={styles.UserIcon} />
           <Cart className={styles.CartIcon} />
+          <p>{cart.length}</p>
         </div>
     </div>
   )

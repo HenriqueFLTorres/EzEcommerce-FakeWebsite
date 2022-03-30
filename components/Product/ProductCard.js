@@ -2,10 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Product.module.css'
+import { updateCart, useCart } from '../../Hooks/CartHook'
 
 
 const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews, filter }) => {
+  const [cart, cartUpdater] = useCart()
 
+  let amount = 1
+
+  console.log(cart);
 
   return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"]) &&  filter["Category"].includes(category) && ( Number(rate.replace(/\s+of\s+\d/g, '')) > filter["Lowest Rating"] ) && (
     <div className={styles.ProductCard}>
@@ -45,7 +50,13 @@ const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, i
           </div>
         </div>   
       </Link>
-      <div className={styles.addCart}>Add to Cart</div>
+      <div className={styles.addCart} onClick={() => { 
+
+        Object.values(a).filter((item) => item.id === id && item.amount++)
+
+        cartUpdater([...cart, {id, title, image, price, amount} ])
+
+       }} >Add to Cart</div>
     </div>
   )
   )

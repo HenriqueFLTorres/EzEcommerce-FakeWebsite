@@ -191,7 +191,7 @@
 }
 
 .ProductCard:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   border-radius: .65vw .65vw 0 0;
   height: 100%;
 }
