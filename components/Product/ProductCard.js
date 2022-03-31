@@ -6,11 +6,8 @@ import { updateCart, useCart } from '../../Hooks/CartHook'
 
 
 const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews, filter }) => {
+
   const [cart, cartUpdater] = useCart()
-
-  let amount = 1
-
-  console.log(cart);
 
   return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"]) &&  filter["Category"].includes(category) && ( Number(rate.replace(/\s+of\s+\d/g, '')) > filter["Lowest Rating"] ) && (
     <div className={styles.ProductCard}>
@@ -52,9 +49,10 @@ const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, i
       </Link>
       <div className={styles.addCart} onClick={() => { 
 
-        Object.values(a).filter((item) => item.id === id && item.amount++)
+          cartUpdater({...cart, [id]: {title, image, price, ["amount"] : 1} })
 
-        cartUpdater([...cart, {id, title, image, price, amount} ])
+          // if Cart already have a current product, a amount of current product will be increased
+          if ( cart.hasOwnProperty(id) ) cartUpdater({...cart, [id]: {...cart[id], amount: cart[id].amount + 1} })
 
        }} >Add to Cart</div>
     </div>

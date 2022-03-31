@@ -89,13 +89,48 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 80%;
+  height: 100%;
   width: 12%;
 
-  padding: 0.5%;
+  padding: 0;
 }
 
 .UserIcon, .CartIcon {
-  height: 60%;
+  height: 50%;
   width: auto;
+}
+
+.CartIcon {
+  transform: translateY(30%);
+}
+
+
+.Cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid purple;
+  height: 100%;
+  width: auto;
+}
+
+
+.CartAmount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 900;
+
+  background-color: #65449b;
+  font-size: var(--step--1);
+
+  height: 50%;
+  width: 100%;
+  border-radius: 100%;
+
+  transform: translate(50%, -20%) scale(.8);
 }

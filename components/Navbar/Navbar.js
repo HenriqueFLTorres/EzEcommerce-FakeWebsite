@@ -9,11 +9,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useCart } from '../../Hooks/CartHook'
 
+
 const Navbar = () => {
-
+  
   const [cart, cartUpdater] = useCart()
+  
+  let totalCartAmount = 0
 
-  console.log(cart["3"]);
+  Object.values(cart).map(item => totalCartAmount += item.amount)
+
+  console.log(cart);
+  console.log(`Total Cart = ${totalCartAmount}`);
 
   return (
     <div className={styles.Navbar}>
@@ -36,8 +42,10 @@ const Navbar = () => {
         </div>
         <div className={styles.Settings}>
           <User className={styles.UserIcon} />
-          <Cart className={styles.CartIcon} />
-          <p>{cart.length}</p>
+          <div className={styles.Cart}>
+            <Cart className={styles.CartIcon} />
+            <p className={styles.CartAmount}>{totalCartAmount}</p>
+          </div>
         </div>
     </div>
   )
