@@ -1,25 +1,24 @@
 import React, { useState } from 'react'
-import LogoDark from '../../svg/LogoDark.svg'
-import SearchIcon from '../../svg/SearchIcon.js'
-import User from '../../svg/User.js'
-import Cart from '../../svg/Cart.js'
-import styles from './Navbar.module.css'
 
 import Link from 'next/link'
 import Image from 'next/image'
 import { useCart } from '../../Hooks/CartHook'
 
+import styles from './Navbar.module.css'
 
-const Navbar = () => {
-  
+import LogoDark from '../../svg/LogoDark.svg'
+import SearchIcon from '../../svg/SearchIcon.js'
+import User from '../../svg/User.js'
+import CartSVG from '../../svg/Cart.js'
+
+const Navbar = ({ cartVisibility, setCartVisibility }) => {
   const [cart, cartUpdater] = useCart()
+
+  // console.log(setCartVisibility);
+
   
   let totalCartAmount = 0
-
   Object.values(cart).map(item => totalCartAmount += item.amount)
-
-  console.log(cart);
-  console.log(`Total Cart = ${totalCartAmount}`);
 
   return (
     <div className={styles.Navbar}>
@@ -43,7 +42,7 @@ const Navbar = () => {
         <div className={styles.Settings}>
           <User className={styles.UserIcon} />
           <div className={styles.Cart}>
-            <Cart className={styles.CartIcon} />
+            <CartSVG className={styles.CartIcon} onClick={() => setCartVisibility(!cartVisibility)} />
             <p className={styles.CartAmount}>{totalCartAmount}</p>
           </div>
         </div>

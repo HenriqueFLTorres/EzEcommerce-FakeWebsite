@@ -1,6 +1,4 @@
-import react, { useState, useEffect } from 'react'
-
-import Head from 'next/head'
+import react, { useState } from 'react'
 
 import Category from '../components/Category/Category'
 import Navbar from '../components/Navbar/Navbar'
@@ -10,23 +8,20 @@ import Background from '../svg/Background'
 
 import ProductsList from '../utils/Products.json'
 import { CartHook } from '../Hooks/CartHook'
+import Cart from '../components/Navbar/Cart'
 
 const category = Array.from( new Set ( ProductsList.map((item) => item.category) ) )
 
 
-export default function Home() {
+export default function Home({ cartVisibility, setCartVisibility }) {
   const [filter, setFilter] = useState({["Category"]: category})
 
 
   return (
     <div className="MainBackground">
       <CartHook>
-        <Head>
-          <title>EzCommerce</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="icon" href="/Logo.png"></link>
-        </Head>
-        <Navbar/>
+        <Navbar setCartVisibility={setCartVisibility} />
+        <Cart cartVisibility={cartVisibility} setCartVisibility={setCartVisibility}/>
         <div className='Content' >
           <Category filter={filter} setFilter={setFilter}/>
           <ProductSection product={ProductsList} filter={filter}/>

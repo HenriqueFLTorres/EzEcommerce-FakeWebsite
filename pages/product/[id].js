@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import { useRouter } from 'next/router'
-import Head from 'next/dist/shared/lib/head';
 
 import Navbar from '../../components/Navbar/Navbar';
 import Shipping from '../../components/ProductInfo/Shipping'
@@ -36,9 +35,6 @@ const ProductDetails = () => {
     return (
       <div className="MainBackground">
         <Navbar/>
-        <Head>
-          <title>EzCommerce</title>
-        </Head>
         { ProductList.map((item) =>  {
         const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
 

@@ -111,7 +111,6 @@
   justify-content: center;
   align-items: center;
 
-  border: 2px solid purple;
   height: 100%;
   width: auto;
 }
@@ -133,4 +132,154 @@
   border-radius: 100%;
 
   transform: translate(50%, -20%) scale(.8);
+}
+
+
+
+
+.CartInterface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 800;
+
+  width: 100%;
+  height: 100vh;
+
+  transform: scale(1) translateY(-7.4%) translateX(-1%);
+  background-color: #04040450;
+
+  transition: transform 550ms ease;
+}
+
+.CartInterface.Closed {
+  display: flex;
+
+  transform: scale(1) translateX(-100%) translateY(-7.4%);
+}
+
+
+.CartGUI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90vw;
+  height: 90vh;
+
+  background-color: rgba(8, 8, 8, 0.908);
+
+  border-radius: 1vw;
+
+  overflow-y: visible;
+}
+
+
+.CloseIcon {
+  display: flex;
+  margin-left: auto;
+  margin-right: 1vw;
+  margin-top: 1vw;
+
+  fill: #fff;
+  cursor: pointer;
+
+  width: 3vw;
+  height: 3vw;
+
+  transition: transform 350ms ease, fill 350ms ease;
+}
+
+.CloseIcon:hover {
+  fill: rgba(245, 115, 115, 0.811);
+  transform: scale(1.5);
+}
+
+
+
+
+
+
+
+.ProductDisplay {
+  display: grid;
+  justify-content: center;
+  gap: 5%;
+
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 30vw));
+  grid-template-rows: repeat(4, 5vw);
+  grid-auto-flow: column;
+
+  height: auto;
+  margin-bottom: 5vw;
+
+}
+
+
+
+
+.CartItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: 2.5vw;
+}
+
+.CartItem .ImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 35%;
+}
+
+.CartItem img {
+  height: 100%;
+
+  border-radius: .5vw;
+  background-position: center;
+}
+
+
+.CartItemInfo {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 70%;
+}
+
+.CartItemInfo h1 {
+  font-size: var(--step--1);
+}
+
+.CartItemInfo h4 {
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+.CartItemInfo h6 {
+  display: block;
+
+  font-size: var(--step-0);
+  font-weight: 800;
+
+  margin-top: auto;
+}
+
+
+
+.TotalPrice {
+  font-size: var(--step-1);
+  font-weight: 400;
+
+  margin-bottom: 2vh;
 }
