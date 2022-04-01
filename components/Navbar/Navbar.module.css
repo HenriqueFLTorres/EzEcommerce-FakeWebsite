@@ -185,12 +185,29 @@
   width: auto;
 
   font-size: var(--step-0);
+  font-weight: 400;
+
+  cursor: pointer;
+
+  background-color: #fff;
+  color: #1d1d1d;
 
   border: none;
-  background-color: rgba(176, 56, 56, 0.811);
   border-radius: .5vw;
 
   padding: .5vw 1.5vw;
+
+  transition: transform, background-color, font-weight;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+}
+
+.removeAll:hover {
+  font-weight: 600;
+
+  background-color: rgba(207, 84, 84, 0.811);
+
+  transform: scale(1.2);
 }
 
 
@@ -208,7 +225,8 @@
   padding-inline: 3vw;
   padding-block: 2vw;
 
-  overflow-y: visible;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -242,12 +260,15 @@
   align-items: center;
 
   grid-template-columns: 100%;
-  grid-template-rows: repeat(auto-fit, 20vh);
+  grid-template-rows: repeat(auto-fit, 10vw);
   grid-auto-flow: row;
 
-  height: 80%;
-  width: 90%;
+  row-gap: 2vw;
 
+  height: 80%;
+  width: 100%;
+
+  padding-inline: 2%;
   margin-top: 6vh;
   /* margin-block: auto; */
 
@@ -283,11 +304,10 @@
   position: relative;
 
   width: 100%;
-  height: 100%;
+  height: 8vw;
 
   object-fit: contain;
 
-  border-radius: .5vw;
   background-position: center;
 }
 
@@ -302,19 +322,54 @@
   margin-left: 4vw;
 }
 
+
+
+.CartItemHead {
+  display: flex;
+  flex-direction: row;
+}
+
+.CartItemHead button {
+  margin-left: auto;
+  margin-right: 1vw;
+
+  padding: .25vw;
+  cursor: pointer;
+
+  background: none;
+  border: none;
+}
+
+.trashIcon {
+  height: 100%;
+  fill: rgba(255, 255, 255, 0.811);
+
+  transition: transform 200ms ease, fill 200ms ease;
+}
+
+.CartItemHead button:hover .trashIcon {
+  transform: scale(1.5);
+  fill: rgba(245, 115, 115, 0.811);
+}
+
+
+
+
+
 .CartItemInfo h1 {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
+  font-weight: 600;
 }
 
 .CartItemInfo h4 {
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   font-weight: 500;
 }
 
 .CartItemInfo h6 {
   display: block;
 
-  font-size: var(--step-0);
+  font-size: var(--step-1);
   font-weight: 800;
 
   margin-top: auto;
@@ -323,7 +378,7 @@
 
 
 .TotalPrice {
-  font-size: var(--step-1);
+  font-size: var(--step-2);
   font-weight: 400;
 
   margin-top: auto;
