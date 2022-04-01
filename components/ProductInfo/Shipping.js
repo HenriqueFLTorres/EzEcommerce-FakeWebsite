@@ -30,7 +30,7 @@ const Shipping = () => {
         <div className={styles.ShippingRequeriments}>
             <div className={styles.DeliveryInfo}>
                 <header><Ship className={styles.SVGIcon}/>Delivery Info</header>
-                <p><div className={styles.GoldHighlighted}>FREE delivery</div><strong>March 30 - April 1</strong> <br/>
+                <p><span className={styles.GoldHighlighted}>FREE delivery</span><strong>March 30 - April 1</strong> <br/>
                 For any place in the USA</p>
             </div>
             <div className={styles.DeliveryCompany}>
@@ -39,7 +39,7 @@ const Shipping = () => {
                 <div className={styles.options}>
                     { DeliveryOptions.map((option, index) => (
                         <div key={index} className={styles.option}>
-                            <span className={bulletPointsClass(index)} onClick={() => companyOption === index ? setCompanyOption(null) : setCompanyOption(index) } />
+                            <span className={bulletPointsClass(index)} onClick={() => companyOption === index ? setCompanyOption(null) : setCompanyOption(index) }></span>
                             <p className={optionActivated(index)}>{option}</p>
                         </div>
                     )) }

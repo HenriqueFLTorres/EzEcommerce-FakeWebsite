@@ -43,7 +43,7 @@ const Navbar = ({ cartVisibility, setCartVisibility }) => {
           <User className={styles.UserIcon} />
           <div className={styles.Cart}>
             <CartSVG className={styles.CartIcon} onClick={() => setCartVisibility(!cartVisibility)} />
-            <p className={styles.CartAmount}>{totalCartAmount}</p>
+            <p className={styles.CartAmount} >{totalCartAmount}</p>
           </div>
         </div>
     </div>

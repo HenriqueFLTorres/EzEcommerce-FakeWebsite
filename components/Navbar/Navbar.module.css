@@ -102,6 +102,14 @@
 
 .CartIcon {
   transform: translateY(30%);
+
+  transition: transform 250ms ease, filter 250ms ease;
+}
+
+.CartIcon:hover {
+  transform: scale(1.2) translateY(30%) rotate(-15deg);
+
+  filter: drop-shadow(0 0 .15vw white);
 }
 
 
@@ -110,6 +118,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 
   height: 100%;
   width: auto;
@@ -144,12 +154,13 @@
 
   position: fixed;
   z-index: 800;
+  top: 0;
 
   width: 100%;
   height: 100vh;
 
-  transform: scale(1) translateY(-7.4%) translateX(-1%);
-  background-color: #04040450;
+  transform: scale(1)  translateX(-1%);
+  background-color: #04040481;
 
   transition: transform 550ms ease;
 }
@@ -157,7 +168,29 @@
 .CartInterface.Closed {
   display: flex;
 
-  transform: scale(1) translateX(-100%) translateY(-7.4%);
+  transform: scale(1) translateX(-100%);
+}
+
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.removeAll {
+  height: 100%;
+  width: auto;
+
+  font-size: var(--step-0);
+
+  border: none;
+  background-color: rgba(176, 56, 56, 0.811);
+  border-radius: .5vw;
+
+  padding: .5vw 1.5vw;
 }
 
 
@@ -167,11 +200,13 @@
   align-items: center;
 
   width: 90vw;
-  height: 90vh;
+  height: 95vh;
 
   background-color: rgba(8, 8, 8, 0.908);
 
   border-radius: 1vw;
+  padding-inline: 3vw;
+  padding-block: 2vw;
 
   overflow-y: visible;
 }
@@ -179,9 +214,8 @@
 
 .CloseIcon {
   display: flex;
-  margin-left: auto;
-  margin-right: 1vw;
-  margin-top: 1vw;
+  margin: auto;
+  margin-right: 0;
 
   fill: #fff;
   cursor: pointer;
@@ -205,15 +239,19 @@
 
 .ProductDisplay {
   display: grid;
-  justify-content: center;
-  gap: 5%;
+  align-items: center;
 
-  grid-template-columns: repeat(auto-fill, minmax(20vw, 30vw));
-  grid-template-rows: repeat(4, 5vw);
-  grid-auto-flow: column;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto-fit, 20vh);
+  grid-auto-flow: row;
 
-  height: auto;
-  margin-bottom: 5vw;
+  height: 80%;
+  width: 90%;
+
+  margin-top: 6vh;
+  /* margin-block: auto; */
+
+  overflow-Y: auto;
 
 }
 
@@ -228,8 +266,6 @@
 
   width: 100%;
   height: 100%;
-
-  margin-bottom: 2.5vw;
 }
 
 .CartItem .ImageContainer {
@@ -238,11 +274,18 @@
   align-items: center;
 
   height: 100%;
-  width: 35%;
+  width: 25%;
+
+  margin-right: auto;
 }
 
 .CartItem img {
+  position: relative;
+
+  width: 100%;
   height: 100%;
+
+  object-fit: contain;
 
   border-radius: .5vw;
   background-position: center;
@@ -253,8 +296,10 @@
   display: flex;
   flex-direction: column;
 
-  height: 100%;
-  width: 70%;
+  height: 80%;
+  width: 75%;
+
+  margin-left: 4vw;
 }
 
 .CartItemInfo h1 {
@@ -281,5 +326,6 @@
   font-size: var(--step-1);
   font-weight: 400;
 
-  margin-bottom: 2vh;
+  margin-top: auto;
+  margin-bottom: 0;
 }

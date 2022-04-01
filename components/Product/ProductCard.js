@@ -49,7 +49,7 @@ const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, i
       </Link>
       <div className={styles.addCart} onClick={() => { 
 
-          cartUpdater({...cart, [id]: {title, image, price, ["amount"] : 1} })
+          cartUpdater({...cart, [id]: {title, id, image, price, ["amount"] : 1} })
 
           // if Cart already have a current product, a amount of current product will be increased
           if ( cart.hasOwnProperty(id) ) cartUpdater({...cart, [id]: {...cart[id], amount: cart[id].amount + 1} })
