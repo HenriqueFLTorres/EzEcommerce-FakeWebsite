@@ -13,6 +13,12 @@
 
     background: linear-gradient(130deg, #62409A -0.01%, #250f48 100.01%);
     border-radius: 10px;
+
+    animation-name: opacity;
+    animation-duration: 350ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .ShippingRequeriments {
@@ -62,10 +68,9 @@
     justify-content: center;
     align-items: center;
 
-    height: 60%;
+    height: 40%;
     margin-top: 5vh;
 }
-
 
 .DeliveryInfo p {
     font-size: var(--step--1);

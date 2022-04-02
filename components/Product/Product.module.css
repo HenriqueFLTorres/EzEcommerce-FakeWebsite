@@ -150,7 +150,7 @@
 .ProductCardInfo .ratingBar {
     display: block;
     width: 100%;
-    height: clamp(0.1rem, 1vw, 1rem);
+    height: clamp(0.1rem, .5vw, 1rem);
     margin-block: 10%;
 
     border-radius: 50vw;
