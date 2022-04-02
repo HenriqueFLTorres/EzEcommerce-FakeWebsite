@@ -16,8 +16,15 @@ const Category = ({ filter, setFilter }) => {
   const [rating, setRating] = useState(0)
 
 
-
   const categoryName = (categoryItem) => classNames( [styles.categoryItem], { [styles.Active]: categoryItem === active } )
+
+  const logWind = () => {
+    if (typeof window !== "undefined") {
+          console.log(window.scrollY)
+    }
+  }
+
+  typeof window !== "undefined" && window.addEventListener('scroll', logWind)
 
   useEffect(() => {
     setFilter({...filter, ["Lowest Price"]: lowestPrice, ["Highest Price"]: highestPrice, ["Lowest Rating"]: rating})
@@ -35,7 +42,7 @@ const Category = ({ filter, setFilter }) => {
            setFilter({...filter, ["Category"]: categoryItem})
            setActive(categoryItem)
         }}> {categoryItem} </p>) }
-      </div>
+      </div> 
       <div className={styles.priceFilter}>
         <div className={styles.LowestPrice}>
           <h3>Lowest Price</h3>

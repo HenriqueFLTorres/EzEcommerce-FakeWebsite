@@ -35,6 +35,13 @@
 
 .categoriesFilter p {
     width: 100%;
+
+    transition: filter 350ms ease, transform 350ms ease, font-size 450ms ease;
+}
+
+.categoriesFilter p:hover {
+    filter: drop-shadow(0 0 .35vw gray);
+    transform: scale(1.2);
 }
 
 
@@ -49,6 +56,8 @@
 .categoryItem.Active {
     font-size: var(--step-2);
     color: #ffffff;
+
+    filter: brightness(0 0 .35vw white);
 }
 
 
@@ -103,15 +112,22 @@
     background: #1d1d1d;
 
     border-radius: 20vw;
+    opacity: .6;
 
-    outline: none; /* Remove outline */
+    outline: none;
+
+    transition: opacity 350ms ease;
 }
 
 .DragPriceLow:hover, .DragPriceHigh:hover, .DragRating:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
+    opacity: 1; 
+}
+
+.DragPriceLow:hover, .DragPriceHigh:hover, .DragRating:hover {
+    opacity: 1; 
+}
   
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
 .DragPriceLow::-webkit-slider-thumb, .DragPriceHigh::-webkit-slider-thumb, .DragRating::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -121,16 +137,26 @@
     border-radius: 100%;
 
     background: #65449b;
-    cursor: pointer; 
+    cursor: pointer;
+
+    transition: filter 350ms ease;
 }
 
 .DragRating::-webkit-slider-thumb {
     background: rgb(211, 151, 54);
 }
   
-.DragPriceLow::-moz-range-thumb, .DragPriceHigh::-moz-range-thumb, .DragRating::-moz-range-thumb  {
+
+.DragPriceLow::-webkit-slider-thumb:hover, .DragPriceHigh::-webkit-slider-thumb:hover{
+    filter: drop-shadow(0 0 .25vw #65449b);
+}
+
+.DragRating::-webkit-slider-thumb:hover {
+    filter: drop-shadow(0 0 .25vw rgb(211, 151, 54));
+}
+/* .DragPriceLow::-moz-range-thumb, .DragPriceHigh::-moz-range-thumb, .DragRating::-moz-range-thumb  {
     width: 1.5vw;
     height: 1.5vw;
     background: #65449b;
     cursor: pointer;
-}
+} */

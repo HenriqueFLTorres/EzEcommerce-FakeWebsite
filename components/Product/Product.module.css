@@ -41,7 +41,21 @@
   );
   border-radius: 0.65vw;
 
+  animation-name: appear;
+  animation-duration: 350ms;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
   transition: transform 550ms ease, border-radius 550ms ease, height 550ms ease;
+}
+
+
+
+
+@keyframes appear {
+  from { transform: scale(0); } 
+  to { transform: scale(1); } 
 }
 
 .cardRedirect {
