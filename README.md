@@ -38,7 +38,15 @@ Classnames
 <br/><br/>
 
 ## Updates 🎉
-  
+
+  #### V1.1 - (03/30 - 03/31) - Cart 🛒
+  <br/>
+  - Added a new feature (Cart) <br/>
+  - You can add multiple items to the cart and it will show you the total amount <br/>
+  - On the cart interface you can (Remove all items, see the items that you have added, remove a specific item and see the total price) <br/>
+  <br/>
+  <img width="40%" src="https://i.imgur.com/06R0qfi.png" />
+  <br/><br/>
   #### V1.0 - Launch
   
   There is a lot to be added, but the user already can filter by price, category, or even rating. Since I chose to not use an API, all items need to be added by hand, but even with that difficulty, each item has a review section, specifications, about, and image carrousel...
