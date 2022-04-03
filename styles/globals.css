@@ -113,7 +113,8 @@ input[type=number] {
   }
 }
 
-@media (max-width: 1050px) {
+
+@media (max-width: 1400px) {
 
   :root {
       --step--2: clamp(0.64rem, calc(0.35rem + 0.40vw), 0.43rem);

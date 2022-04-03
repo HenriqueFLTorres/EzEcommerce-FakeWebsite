@@ -78,6 +78,7 @@
 
 .Ratings {
     height: 15%;
+    width: 80%;
 
     margin-block: auto;
 }
@@ -108,7 +109,7 @@
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 25px;
+    height: 1.5vw;
     background: #1d1d1d;
 
     border-radius: 20vw;
@@ -154,9 +155,3 @@
 .DragRating::-webkit-slider-thumb:hover {
     filter: drop-shadow(0 0 .25vw rgb(211, 151, 54));
 }
-/* .DragPriceLow::-moz-range-thumb, .DragPriceHigh::-moz-range-thumb, .DragRating::-moz-range-thumb  {
-    width: 1.5vw;
-    height: 1.5vw;
-    background: #65449b;
-    cursor: pointer;
-} */
