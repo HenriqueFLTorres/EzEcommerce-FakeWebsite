@@ -3,12 +3,13 @@ import React, { useState, useEffect, useLayoutEffect } from 'react'
 import Products from '../../utils/Products.json'
 
 import styles from './Category.module.css'
+import Arrow from '../../svg/Arrow.js'
 import classNames from 'classnames'
 
 const category = Array.from( new Set ( Products.map((item) => item.category) ) )
 
 
-const Category = ({ filter, setFilter }) => {
+const Category = ({ filter, setFilter, colapse, setColapse }) => {
   const [active, setActive] = useState("All Departaments")
 
   const [lowestPrice, setLowestPrice] = useState(0)
@@ -23,7 +24,12 @@ const Category = ({ filter, setFilter }) => {
 
 
   return (
-    <div className={styles.categoryBar} >
+    <div className={ classNames( [styles.categoryBar], { [styles.Colapsed]: colapse } )}>
+      <div className={styles.colapse} onClick={() => setColapse(!colapse)}>
+        <Arrow className={styles.colapseIcon} />
+        <Arrow className={styles.colapseIcon} />
+        <Arrow className={styles.colapseIcon} />
+      </div>
       <div className={styles.categoriesFilter}>
         <p className={categoryName("All Departaments")} onClick={() => { 
           setFilter({...filter, ["Category"]: category})

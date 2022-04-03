@@ -20,6 +20,53 @@
     margin-top: 10vh;
 
     transform: translateX(-35vw);
+
+    transition: transform 450ms ease;
+}
+
+.categoryBar.Colapsed {
+    transform: translateX(-300%);
+}
+
+.categoryBar.Colapsed .colapse {
+    flex-direction: column;
+
+    height: 10vh;
+    width: 10%;
+    background-color: #65449b;
+
+    transform: translateX(600%);
+}
+
+.categoryBar.Colapsed .colapseIcon {
+    transform: rotate(-90deg);
+}
+
+.colapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    cursor: pointer;
+    border-radius: .5vw;
+
+    width: 40%;
+    height: 5vh;
+    
+    margin-bottom: 2vh;
+
+    transition: background-color, height, width, flex-direction, transform;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+}
+
+.colapse:hover {
+    background-color: #323232;
+}
+
+.colapseIcon {
+    transform: rotate(90deg);
+    transition: transform 450ms ease;
 }
 
 .categoriesFilter {

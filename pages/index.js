@@ -16,9 +16,7 @@ const category = Array.from( new Set ( ProductsList.map((item) => item.category)
 export default function Home({ cartVisibility, setCartVisibility }) {
   const [filter, setFilter] = useState({["Category"]: category})
 
-
-  
-
+  const [colapse, setColapse] = useState(false)
 
   return (
     <div className="MainBackground">
@@ -26,8 +24,8 @@ export default function Home({ cartVisibility, setCartVisibility }) {
         <Navbar setCartVisibility={setCartVisibility} />
         <Cart cartVisibility={cartVisibility} setCartVisibility={setCartVisibility}/>
         <div className='Content' >
-          <Category filter={filter} setFilter={setFilter}/>
-          <ProductSection product={ProductsList} filter={filter}/>
+          <Category filter={filter} setFilter={setFilter} colapse={colapse} setColapse={setColapse} />
+          <ProductSection product={ProductsList} filter={filter} colapse={colapse}/>
         </div>
         <Background className="bgSvg"/>
       </CartHook>

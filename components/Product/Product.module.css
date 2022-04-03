@@ -17,6 +17,15 @@
 
 
   transform: translateX(12.5vw);
+
+  transition: width, transform;
+  transition-duration: 550ms;
+  transition-timing-function: ease;
+}
+
+.ProductSection.Expand {
+  width: 90vw;
+  transform: translateX(0vw);
 }
 
 .ProductCard {

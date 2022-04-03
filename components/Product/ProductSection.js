@@ -1,10 +1,12 @@
 import React from 'react'
 import ProductCard from './ProductCard';
-import styles from './Product.module.css'
 
-const ProductSection = ({ product, filter }) => {
+import styles from './Product.module.css'
+import classNames from 'classnames';
+
+const ProductSection = ({ product, filter, colapse }) => {
   return (
-    <div className={styles.ProductSection}>
+    <div className={ classNames( [styles.ProductSection], { [styles.Expand]: colapse } )}>
         {product?.map((productInfo) => {
             const { name, price, category, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = productInfo
 
