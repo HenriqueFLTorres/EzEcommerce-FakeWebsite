@@ -142,7 +142,7 @@ input[type=number] {
   }
   
 }
-
+/* 
 @media (max-width: 450px) {
 
   :root {
@@ -153,7 +153,7 @@ input[type=number] {
       --step-2: clamp(0.45rem, calc(0.32rem + 0.65vw), 0.78rem);
     }
 
-}
+} */
 
 @media (min-width: 2100px) {
 

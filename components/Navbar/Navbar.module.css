@@ -711,7 +711,14 @@
 
 
 
-/* @media (max-width: 1000px) and (orientation: landscape) {
+@media (max-width: 600px) and (orientation: portrait) {
+  .burguer  {
+      width: 3rem;
+  }
+}
+
+
+@media (max-width: 1000px) and (orientation: landscape) {
   .burguer  {
       width: 6vw;
   }
@@ -721,4 +728,4 @@
   .burguer  {
       width: 6vw;
   }
-} */
+}

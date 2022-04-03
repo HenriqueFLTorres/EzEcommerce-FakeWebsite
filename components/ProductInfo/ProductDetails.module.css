@@ -58,7 +58,7 @@
 
     text-align: center;
 
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     font-weight: 600;
 }
 
@@ -452,6 +452,8 @@
 
 
 .descriptionImages {
+    display: flex;
+    flex-direction: column;
     width: 40%;
 }
 
@@ -474,8 +476,7 @@
     margin-block: 5%;
     padding: 5%;
 
-    text-align: justify;
-    line-height: 140%;
+    line-height: 150%;
 }
 
 .bulletPoints h1, .specifications h1, .reviews h1 {
@@ -484,7 +485,7 @@
 }
 
 .bulletPoints p {
-    font-size: var(--step-0);
+    font-size: var(--step-1);
 }
 
 
@@ -512,4 +513,154 @@
 
 .reviewFragment p {
     white-space: pre-line;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .productHeader {
+        margin-top: 15vh;
+        height: 80vh;
+    }
+
+    .productBuy {
+        position: relative;
+        z-index: 12200;
+    }
+
+
+    .descriptionImages {
+        width: 30%;
+    }
+
+    .moreInfo {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .productHeader {
+        height: 70vh;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .mainProductInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productHeader .images {
+        width: 80%;
+    }
+
+    .productBuy {
+        width: 80%;
+    }
+
+    
+    .bulletPoints p {
+        line-height: 140%;
+        margin-bottom: 2%;
+    }
+
+    
+}
+
+
+@media (max-width: 500px) {
+    .aboutProduct {
+        flex-direction: column-reverse;
+    }
+
+    .descriptionImages, .moreInfo {
+        width: 100%;
+    }
+
+    
+    .productHeader {
+        height: auto;
+    }
+    .images {
+        height: 30vh;
+    }
+
+    .productBuy {
+        height: 25vh;
+
+        background: linear-gradient(130deg, rgba(99, 64, 154, 1) -0.01%, rgba(37, 15, 72, 0.7) 100.01%);
+    }
+
+    .selectAmount input {
+        height: 6vw;
+        width: 8vw;
+    }
+
+    .selectAmount .arrow {
+        width: 8vw;
+    }
+    
+
+    .productBuy .addCart {
+        height: 6vw;
+        width: 100%;
+    }
+
+
+
+    
+
+    .itemPrice h2 {
+        font-size: var(--step-2);
+        font-weight: 400;
+
+        text-decoration: line-through;
+        color: #CECECE;
+    }
+
+    .itemPrice h3 {
+        font-size: var(--step-5);
+        font-weight: 400;
+    }
+
+    .productAwards p {
+        font-size: var(--step-1);
+        text-align: center;
+    }
+
+
+    
+}
+
+
+@media (max-width: 400px) {
+    .productBuy {
+        flex-direction: column;
+
+        height: 40vh;
+    }
+
+    .buyInfo, .productComplementar {
+        width: 80%;
+    }
+
+
+    .aboutSection {
+        padding-top: 5vh;
+    }
+
+    .aboutProduct {
+        margin-top: 5vh;
+    }
 }

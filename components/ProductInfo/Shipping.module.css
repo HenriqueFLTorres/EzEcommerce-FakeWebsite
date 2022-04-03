@@ -31,7 +31,7 @@
 }
 
 .SVGIcon {
-    height: 100%;
+    height: 80%;
     margin-right: 7%;
 }
 
@@ -243,3 +243,161 @@
     color: #bb5050;
     margin-bottom: 2%;
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+
+    .ShippingContainer {
+        padding-top: 1%;
+        width: 90%;
+    }
+
+    .DeliveryInfo header, 
+    .DeliveryCompany header, 
+    .DeliveryCode header {
+        height: 20%;
+
+        font-size: var(--step-0);
+        font-weight: 600;
+    }
+
+    .DeliveryInfo p {
+        font-size: var(--step--2);
+    }
+
+    .option p {
+        margin-left: 1vw;
+        font-size: var(--step--2);
+    }
+    
+    
+    .options h6 {
+        font-size: var(--step--2);
+    
+        width: 70%;
+        margin-top: -2%;
+    }
+
+
+        
+    .postalCode {
+        width: 80%;
+        height: 20%;
+
+        font-weight: 600;
+        font-size: var(--step--1);
+    }
+
+    .submitButtom {
+        font-size: var(--step--1);
+    }
+
+    .DeliveryCode div p {
+        font-size: var(--step--1);
+    }    
+
+}
+
+@media (max-width: 600px) {
+
+    .ShippingContainer {
+        justify-content: center;
+        height: 60vh;
+    }
+
+    .ShippingRequeriments {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    .DeliveryInfo,
+    .DeliveryCompany,
+    .DeliveryCode {
+        height: 33%;
+    }
+
+    
+
+    .DeliveryInfo header, 
+    .DeliveryCompany header, 
+    .DeliveryCode header {
+        justify-content: center;
+        font-size: var(--step-2);
+    }
+
+    .DeliveryInfo p {
+        font-size: var(--step--1);
+    }
+
+    .option {
+        justify-content: center;
+    }
+
+    .option p {
+        font-size: var(--step-1);
+    }
+
+    .options h6, .DeliveryCode div p {
+        text-align: center;
+        font-size: var(--step-0);
+    }
+
+    .DeliveryCode {
+        margin-top: 5%;
+    }
+
+    .DeliveryCode div {
+        margin-top: 5%;
+    }
+        
+    .postalCode {
+        width: 80%;
+        height: 20%;
+
+        font-weight: 600;
+        font-size: var(--step-0);
+    }
+
+    .submitButtom {
+        font-size: var(--step--1);
+    } 
+
+}
+/* 
+@media (max-width: 500px) {
+
+
+    .DeliveryInfo header, 
+    .DeliveryCompany header, 
+    .DeliveryCode header {
+        font-size: var(--step-2);
+    }
+
+    .DeliveryInfo p {
+        font-size: var(--step--1);
+    }
+
+    .option p {
+        font-size: var(--step-1);
+    }
+
+    .options h6, .DeliveryCode div p {
+        font-size: var(--step-0);
+    }
+        
+    .postalCode {
+        font-size: var(--step-0);
+    }
+
+    .submitButtom {
+        font-size: var(--step--1);
+    } 
+
+} */
