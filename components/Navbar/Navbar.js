@@ -14,8 +14,6 @@ import CartSVG from '../../svg/Cart.js'
 const Navbar = ({ cartVisibility, setCartVisibility }) => {
   const [cart, cartUpdater] = useCart()
 
-  // console.log(setCartVisibility);
-
   
   let totalCartAmount = 0
   Object.values(cart).map(item => totalCartAmount += item.amount)

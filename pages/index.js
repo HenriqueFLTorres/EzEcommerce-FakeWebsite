@@ -17,6 +17,9 @@ export default function Home({ cartVisibility, setCartVisibility }) {
   const [filter, setFilter] = useState({["Category"]: category})
 
 
+  
+
+
   return (
     <div className="MainBackground">
       <CartHook>

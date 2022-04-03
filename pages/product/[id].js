@@ -14,11 +14,15 @@ import ProductList from '../../utils/Products.json'
 import classNames from 'classnames';
 import styles from '../../components/ProductInfo/ProductDetails.module.css'
 import Background from '../../svg/Background';
+import { useCart } from '../../Hooks/CartHook';
+import Cart from '../../components/Navbar/Cart';
 
 
-const ProductDetails = () => {
+const ProductDetails = ({ cartVisibility, setCartVisibility }) => {
   const [imageIndex, setImageIndex] = useState(0)
-  const [itemValue, setItemValue] = useState(0)
+  const [itemValue, setItemValue] = useState(1)
+  const [cart, cartUpdater] = useCart()
+
   const router = useRouter()
 
 
@@ -30,19 +34,21 @@ const ProductDetails = () => {
   }
 
   const arrowActivated = (rotation) => classNames( { [styles.option + rotation + Activated]: clicked } )
+
   
 
     return (
       <div className="MainBackground">
-        <Navbar/>
-        { ProductList.map((item) =>  {
+        <Navbar setCartVisibility={setCartVisibility} />
+        <Cart cartVisibility={cartVisibility} setCartVisibility={setCartVisibility}/>
+        { ProductList.map((item, index) =>  {
         const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
 
 
         return (
         ( Number(router.query.id) === product_id ) && (
           
-          <header className={styles.productHeader} >
+          <header className={styles.productHeader} key={index} >
             <div className={styles.title}>{name}</div>
             <div className={styles.mainProductInfo}>
 
@@ -72,7 +78,7 @@ const ProductDetails = () => {
 
                       <div className={styles.selectAmount}>
                         <Arrow className={styles.arrow} onClick={(e) => {
-                          setItemValue( handleValue(itemValue - 1, 0, 20) )
+                          setItemValue( handleValue(itemValue - 1, 1, 20) )
                           if ( e.target.tagName === "path" ) {
                             e.target.parentNode.classList.add(styles.ActivatedLeft)
                             setTimeout(() => {
@@ -88,7 +94,7 @@ const ProductDetails = () => {
                         }}/>
                         <input value={itemValue} readOnly={true}/>
                         <Arrow className={styles.arrow} onClick={(e) => {
-                          setItemValue( handleValue(itemValue + 1, 0, 20) )
+                          setItemValue( handleValue(itemValue + 1, 1, 20) )
                           if ( e.target.tagName === "path" ) {
                             e.target.parentNode.classList.add(styles.ActivatedRight)
                             setTimeout(() => {
@@ -104,7 +110,19 @@ const ProductDetails = () => {
                         }}/>
                       </div>
 
-                      <button className={styles.addCart}>Add to Cart</button>
+                      <button className={styles.addCart}
+                      onClick={() => { 
+                        let id = product_id
+                        let title = name
+                        let image = main_image
+
+                        cartUpdater({...cart, [id]: {title, id, image, price, ["amount"] : itemValue} })
+              
+                        // if Cart already have a current product, a amount of current product will be increased
+                        if ( cart.hasOwnProperty(id) ) cartUpdater({...cart, [id]: {...cart[id], amount: cart[id].amount + itemValue} })
+              
+                     }} 
+                      >Add to Cart</button>
 
                     </div>
 
@@ -146,36 +164,30 @@ const ProductDetails = () => {
                 { ProductList.map((item) =>  {
                   const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
                   
-                  return ( Number(router.query.id) === product_id ) && description_images.map((image) => <img className={styles.productImage} src={image} alt={image}/>)
+                  return ( Number(router.query.id) === product_id ) && description_images.map((image, index) => <img key={index} className={styles.productImage} src={image} alt={image}/>)
                 })}
               </div>
               <div className={styles.moreInfo}>
-                { ProductList.map((item) =>  {
+                { ProductList.map((item, index) =>  {
                   const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
                   
                   return (
                     ( Number(router.query.id) === product_id ) && (
                     <>
-                      <div className={styles.bulletPoints}>
+                      <div className={styles.bulletPoints} key={index} >
                         <h1>More Info</h1>
-                        { about_product.map((bulletPoint) => <p>• {bulletPoint}</p> ) }
+                        { about_product.map((bulletPoint, index) => <p key={index}>• {bulletPoint}</p> ) }
                       </div>
                       <div className={styles.specifications}>
                         <h1>Specifications</h1>
-                        { specifications.map((item) => <p>{item}</p>) }
+                        { specifications.map((item, index) => <p key={index}>{item}</p>) }
                       </div>
                       <div className={styles.reviews}>
                         <h1>Reviews</h1>
-                        { reviews.map((review) => {
-                          try {
-
-                            let parse = JSON.parse(review.message)
-                          } catch (error) {
-
-                          }
+                        { reviews.map((review, index) => {
                           return (
 
-                          <div className={styles.reviewFragment}>
+                          <div className={styles.reviewFragment} key={index}>
                             <h2>{review.title}</h2>
                             <h5>{review.author} - <div className={styles.GoldHighlighted}>{review.rating}</div></h5>
                             <p>{ review.message.replace('\n', "\n") }</p>
