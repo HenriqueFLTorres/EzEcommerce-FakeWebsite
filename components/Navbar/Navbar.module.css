@@ -16,6 +16,10 @@
 
 
 
+.logo {
+  height: 60%;
+}
+
 
 
 .Links {
@@ -536,7 +540,7 @@
 }
 
 .barCollapse {
-  height: 100vh;
+  height: 20vh;
 }
 
 .MobileBar .header {
@@ -562,7 +566,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: clamp(4.5rem, 10vw + 1rem, 5%);
+  width: clamp(4.5rem, 8vw + 1rem, 5%);
   height: 60%;
 }
 
@@ -707,9 +711,9 @@
 
 
 
-@media (max-width: 1000px) and (orientation: landscape) {
+/* @media (max-width: 1000px) and (orientation: landscape) {
   .burguer  {
-      width: 4vw;
+      width: 6vw;
   }
 }
 
@@ -717,4 +721,4 @@
   .burguer  {
       width: 6vw;
   }
-}
+} */

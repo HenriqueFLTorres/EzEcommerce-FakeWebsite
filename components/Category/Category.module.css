@@ -93,7 +93,7 @@
 
 
 .categoryItem {
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     color: #bbbbbb;
     cursor: pointer;
 
@@ -101,7 +101,7 @@
 }
 
 .categoryItem.Active {
-    font-size: var(--step-2);
+    font-size: var(--step-1);
     color: #ffffff;
 
     filter: brightness(0 0 .35vw white);
@@ -132,11 +132,11 @@
 
 
 .LowestPrice h3, .HighestPrice h3, .Ratings h3 {
-    font-size: var(--step-1);
+    font-size: var(--step-0);
 }
 
 .LowestPrice h6, .HighestPrice h6, .Ratings h6 {
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     font-weight: 400;
 }
 
@@ -201,4 +201,62 @@
 
 .DragRating::-webkit-slider-thumb:hover {
     filter: drop-shadow(0 0 .25vw rgb(211, 151, 54));
+}
+
+
+
+
+@media (max-width: 850px) {
+    
+
+    .categoryBar {
+        flex-direction: row;
+        position: relative;
+
+        width: 90%;
+        height: 20vh;
+
+        margin: 0 auto;
+        margin-top: 15vh;
+
+        transform: translate(0);
+    }
+
+    .categoriesFilter {
+        justify-content: center;
+        gap: 2vh;
+
+        height: 100%;
+        width: 80%;
+
+        margin: 0;
+    }
+
+
+    .priceFilter {
+        height: 90%;
+    }
+
+
+    .LowestPrice, .HighestPrice, .Ratings {
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+    
+        margin: 0;
+    
+        height: 50%;
+    }
+
+
+    .DragPriceLow, .DragPriceHigh, .DragRating {
+        width: 80%;
+        height: 1.5vw;
+        background: #1d1d1d;
+    }
+
+    .colapse {
+        display: none;
+    }
+
 }

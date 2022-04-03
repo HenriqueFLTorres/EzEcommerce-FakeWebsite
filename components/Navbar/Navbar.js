@@ -6,7 +6,7 @@ import { useCart } from '../../Hooks/CartHook'
 
 import styles from './Navbar.module.css'
 
-import LogoDark from '../../svg/LogoDark.svg'
+import Logo from '../../svg/Logo.js'
 import SearchIcon from '../../svg/SearchIcon.js'
 import User from '../../svg/User.js'
 import CartSVG from '../../svg/Cart.js'
@@ -47,7 +47,7 @@ const Navbar = ({ cartVisibility, setCartVisibility }) => {
       <div className={ classNames( styles.MobileBar , { [styles.barCollapse]: !mobile } ) }>
         <div className={styles.header}>
               <Link href="/">
-                <Image src={LogoDark} alt="Logo" width={150} height={200} style={{ cursor: "pointer" }}/>
+                <Logo className={styles.logo} />
               </Link>
             <div className={ classNames( styles.burguer , { [styles.burguerActive]: mobile } ) } onClick={() => setMobile(!mobile)}>
                 <span></span>
@@ -87,7 +87,7 @@ const Navbar = ({ cartVisibility, setCartVisibility }) => {
     return (
     <div className={styles.Navbar}>
       <Link href="/">
-        <Image src={LogoDark} alt="Logo" width={150} height={200} style={{ cursor: "pointer" }}/>
+        <Logo className={styles.logo} />
       </Link>
         <ul className={styles.Links}>
           <li className={styles.link}>

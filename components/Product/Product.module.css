@@ -227,3 +227,44 @@
 .addCart:hover {
   background-color: #7b5fa9;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 850px) {
+
+  .ProductSection {
+    margin: 0 auto;
+    margin-top: 8vh;
+
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20vw));
+
+    width: 90%;
+
+    transform: translate(0);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .ProductSection {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 20vw));
+    grid-auto-rows: clamp(10rem, 25vh, 200rem);
+  }
+
+}

@@ -40,6 +40,7 @@
 
   z-index: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .bgSvg {
@@ -125,7 +126,7 @@ input[type=number] {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 850px) {
 
   :root {
       --step--2: clamp(0.48rem, calc(0.30rem + 0.26vw), 0.35rem);
@@ -134,6 +135,12 @@ input[type=number] {
       --step-1: clamp(0.60rem, calc(0.47rem + 0.66vw), 0.94rem);
       --step-2: clamp(0.72rem, calc(0.54rem + 0.88vw), 1.17rem);
   }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
 
 @media (max-width: 450px) {
