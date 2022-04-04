@@ -154,6 +154,7 @@
 
 .DragPriceLow, .DragPriceHigh, .DragRating {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     width: 100%;
     height: 1.5vw;
@@ -176,13 +177,19 @@
 }
   
 
-.DragPriceLow::-webkit-slider-thumb, .DragPriceHigh::-webkit-slider-thumb, .DragRating::-webkit-slider-thumb {
+.DragPriceLow::-webkit-slider-thumb,
+.DragPriceLow::-moz-range-thumb,
+.DragPriceHigh::-webkit-slider-thumb,
+.DragPriceHigh::-moz-range-thumb,
+.DragRating::-moz-range-thumb,
+.DragRating::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
 
     width: 1.5vw;
     height: 1.5vw;
     border-radius: 100%;
+    border: none;
 
     background: #65449b;
     cursor: pointer;
@@ -190,12 +197,15 @@
     transition: filter 350ms ease;
 }
 
-.DragRating::-webkit-slider-thumb {
+.DragRating::-webkit-slider-thumb, .DragRating::-moz-range-thumb {
     background: rgb(211, 151, 54);
 }
   
 
-.DragPriceLow::-webkit-slider-thumb:hover, .DragPriceHigh::-webkit-slider-thumb:hover{
+.DragPriceLow::-webkit-slider-thumb:hover,
+.DragPriceLow::-moz-range-thumb:hover
+.DragPriceHigh::-webkit-slider-thumb:hover
+.DragPriceHigh::-moz-range-thumb:hover {
     filter: drop-shadow(0 0 .25vw #65449b);
 }
 
@@ -282,10 +292,13 @@
         height: 1.75vh;
     }
 
-    .DragPriceLow::-webkit-slider-thumb, .DragPriceHigh::-webkit-slider-thumb, .DragRating::-webkit-slider-thumb {
+    .DragPriceLow::-webkit-slider-thumb, 
+    .DragPriceLow::-moz-range-thumb, 
+    .DragPriceHigh::-webkit-slider-thumb, 
+    .DragPriceHigh::-moz-range-thumb,
+    .DragRating::-webkit-slider-thumb
+    .DragRating::-moz-range-thumb {
         width: 1.75vh;
         height: 1.75vh;
     }
-
-
 }

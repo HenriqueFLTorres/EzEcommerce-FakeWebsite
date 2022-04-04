@@ -334,6 +334,8 @@
 .CartItemHead {
   display: flex;
   flex-direction: row;
+
+  height: max-content;
 }
 
 .CartItemHead button {
@@ -348,7 +350,7 @@
 }
 
 .trashIcon {
-  height: 100%;
+  height: 2vw;
   fill: rgba(255, 255, 255, 0.811);
 
   transition: transform 200ms ease, fill 200ms ease;
@@ -366,6 +368,8 @@
 .CartItemInfo h1 {
   font-size: var(--step-0);
   font-weight: 600;
+
+  height: max-content;
 }
 
 .CartItemInfo h4 {
