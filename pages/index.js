@@ -4,7 +4,6 @@ import Category from '../components/Category/Category'
 import Navbar from '../components/Navbar/Navbar'
 import ProductSection from '../components/Product/ProductSection'
 import Background from '../svg/Background'
-// import Logo from '/Logo.png'
 
 import ProductsList from '../utils/Products.json'
 import { CartHook } from '../Hooks/CartHook'
@@ -25,7 +24,7 @@ export default function Home({ cartVisibility, setCartVisibility }) {
         <Cart cartVisibility={cartVisibility} setCartVisibility={setCartVisibility}/>
         <div className='Content' >
           <Category filter={filter} setFilter={setFilter} colapse={colapse} setColapse={setColapse} />
-          <ProductSection product={ProductsList} filter={filter} colapse={colapse}/>
+          <ProductSection product={ProductsList} filter={filter} colapse={colapse} page={1} />
         </div>
         <Background className="bgSvg"/>
       </CartHook>

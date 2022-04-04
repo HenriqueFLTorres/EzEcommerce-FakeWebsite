@@ -16,6 +16,7 @@ import styles from '../../components/ProductInfo/ProductDetails.module.css'
 import Background from '../../svg/Background';
 import { useCart } from '../../Hooks/CartHook';
 import Cart from '../../components/Navbar/Cart';
+import Related from '../../components/ProductInfo/Related';
 
 
 const ProductDetails = ({ cartVisibility, setCartVisibility }) => {
@@ -42,7 +43,7 @@ const ProductDetails = ({ cartVisibility, setCartVisibility }) => {
         <Navbar setCartVisibility={setCartVisibility} />
         <Cart cartVisibility={cartVisibility} setCartVisibility={setCartVisibility}/>
         { ProductList.map((item, index) =>  {
-        const { name, price, product_id, rating, main_image, total_ratings, original_price, in_stock, images, about_product, specifications, options, description_images, reviews } = item
+        const { name, price, product_id, rating, main_image, total_ratings, original_price, images, category } = item
 
 
         return (
@@ -156,6 +157,8 @@ const ProductDetails = ({ cartVisibility, setCartVisibility }) => {
 
 
         )) }) }
+        <Related />
+
 
         <div className={styles.aboutSection}>
             <Shipping/>

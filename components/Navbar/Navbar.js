@@ -40,7 +40,6 @@ const Navbar = ({ cartVisibility, setCartVisibility }) => {
 
   
   const isMobile = width <= 1200;
-  console.log(isMobile);
 
   if ( isMobile ) {
     return (

@@ -1,20 +1,12 @@
-.ProductSection {
-  display: grid;
-  margin: 0 auto;
-  margin-top: 10vh;
-  margin-bottom: 20vh;
+.ProductList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   position: relative;
   z-index: 20;
 
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 15vw));
-  grid-auto-rows: clamp(23rem, 25vw, 200rem);
-  justify-content: space-evenly;
-  gap: 5vw;
-  row-gap: 2%;
-
   width: 65vw;
-
 
   transform: translateX(12.5vw);
 
@@ -23,7 +15,24 @@
   transition-timing-function: ease;
 }
 
-.ProductSection.Expand {
+.ProductSection {
+  display: grid;
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+
+ 
+
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 15vw));
+  grid-auto-rows: clamp(23rem, 25vw, 200rem);
+  justify-content: space-evenly;
+  gap: 5vw;
+  row-gap: 2%;
+
+  width: 100%;
+}
+
+.ProductList.Expand {
   width: 90vw;
   transform: translateX(0vw);
 }
@@ -234,6 +243,43 @@
 
 
 
+.pageSelector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 50%;
+  height: 10vh;
+}
+
+.pageSelector h5 {
+  font-size: var(--step-1);
+  font-weight: 400;
+}
+
+.pageSelector h5 .Bold {
+  font-weight: 700;
+}
+
+
+.pageSelector button {
+  background-color: #4f357a50;
+  border: none;
+  border-radius: .3vw;
+
+  cursor: pointer;
+
+  width: 20%;
+  height: 50%;
+
+  transition: background-color 350ms ease, transform 350ms ease;
+}
+
+.pageSelector button:hover {
+  background-color: #65449b;
+  transform: scale(1.1);
+}
 
 
 
@@ -247,15 +293,21 @@
 
 @media (max-width: 850px) {
 
-  .ProductSection {
+  .ProductList {
     margin: 0 auto;
-    margin-top: 8vh;
-
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 20vw));
-
     width: 90%;
 
     transform: translate(0);
+  }
+
+  .ProductSection {
+    margin-top: 8vh;
+
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20vw));
+  }
+
+  .pageSelector {
+    width: 90%;
   }
 
 }
@@ -265,6 +317,19 @@
   .ProductSection {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 20vw));
     grid-auto-rows: clamp(10rem, 25vh, 200rem);
+  }
+
+  .pageSelector button {
+    width: 30%;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .ProductSection {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 40vw));
+    grid-auto-rows: clamp(10rem, 35vh, 200rem);
   }
 
 }

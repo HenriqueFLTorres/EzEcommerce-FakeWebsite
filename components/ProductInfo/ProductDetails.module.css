@@ -588,6 +588,10 @@
         width: 100%;
     }
 
+    .specifications, .reviewFragment {
+        font-size: var(--step-2);
+    }
+
     
     .productHeader {
         height: auto;
@@ -653,6 +657,10 @@
 
     .buyInfo, .productComplementar {
         width: 80%;
+    }
+
+    .productComplementar .rate {
+        margin-top: 0;
     }
 
 

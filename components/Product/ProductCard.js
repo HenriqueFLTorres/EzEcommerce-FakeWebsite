@@ -8,11 +8,11 @@ import { updateCart, useCart } from '../../Hooks/CartHook'
 const ProductCard = ({ title, category, image, price, id, rate, oPrice, stock, images, about, specifications, options, descImages, reviews, filter }) => {
 
   const [cart, cartUpdater] = useCart()
-
+  // Checks if the product respect the filter (Lower price, highest price, category and rating)
   return ( (filter["Lowest Price"] <= price) && (price <= filter["Highest Price"]) &&  filter["Category"].includes(category) && ( Number(rate.replace(/\s+of\s+\d/g, '')) > filter["Lowest Rating"] ) && (
     <div className={styles.ProductCard}>
       <Link href={{
-        pathname: "product/[id]",
+        pathname: "/product/[id]",
         query: {
             id: id,
         }

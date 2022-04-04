@@ -1,0 +1,54 @@
+.relatedTitle {
+    position: relative;
+    z-index: 200;
+
+    text-align: start;
+
+    width: 80%;
+    margin: 0 auto;
+    font-size: var(--step-4);
+    color: #cccccc;
+}
+
+.RelatedContainer {
+    display: grid;  
+
+    position: relative;
+    z-index: 200;
+
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    
+
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 17vw));
+    grid-auto-rows: clamp(23rem, 25vw, 200rem);
+    justify-content: space-evenly;
+    gap: 5vw;
+    row-gap: 2%;
+
+    width: 90%;
+}
+
+
+
+
+@media (max-width: 1300px) {
+
+    .RelatedContainer {
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 40vw));
+      grid-auto-rows: clamp(10rem, 35vh, 200rem);
+    }
+  
+  }
+
+
+@media (max-width: 500px) {
+
+    .RelatedContainer {
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 80vw));
+      grid-auto-rows: clamp(10rem, 25vh, 200rem);
+    }
+  
+  }

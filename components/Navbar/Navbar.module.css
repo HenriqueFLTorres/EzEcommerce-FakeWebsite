@@ -729,3 +729,11 @@
       width: 6vw;
   }
 }
+
+
+@media (max-width: 1000px) {
+  
+  .checkOut h1, .checkOut h5 {
+    transform: translateY(-5vh);
+  }
+}

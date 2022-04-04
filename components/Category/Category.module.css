@@ -260,3 +260,32 @@
     }
 
 }
+
+
+
+@media (max-width: 600px) {
+    
+
+    .categoryBar {
+        flex-direction: column;
+
+        height: 40vh;
+    }
+
+    .categoriesFilter {
+        gap: 1vh;
+        height: 50%;
+    }
+
+
+    .DragPriceLow, .DragPriceHigh, .DragRating {
+        height: 1.75vh;
+    }
+
+    .DragPriceLow::-webkit-slider-thumb, .DragPriceHigh::-webkit-slider-thumb, .DragRating::-webkit-slider-thumb {
+        width: 1.75vh;
+        height: 1.75vh;
+    }
+
+
+}

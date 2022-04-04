@@ -55,6 +55,10 @@
   filter: blur(30px);
 }
 
+.bgSvg:nth-of-type(2) {
+  transform: scaleY(-1) translateY(-130%);
+}
+
 .Content {
   display: flex;
   flex-direction: row;
@@ -142,18 +146,6 @@ input[type=number] {
   }
   
 }
-/* 
-@media (max-width: 450px) {
-
-  :root {
-      --step--2: clamp(0.32rem, calc(0.18rem + 0.20vw), 0.22rem);
-      --step--1: clamp(0.40rem, calc(0.21rem + 0.27vw), 0.26rem);
-      --step-0: clamp(0.31rem, calc(0.24rem + 0.37vw), 0.50rem);
-      --step-1: clamp(0.38rem, calc(0.28rem + 0.49vw), 0.63rem);
-      --step-2: clamp(0.45rem, calc(0.32rem + 0.65vw), 0.78rem);
-    }
-
-} */
 
 @media (min-width: 2100px) {
 

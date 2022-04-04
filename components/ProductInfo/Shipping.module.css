@@ -341,7 +341,13 @@
     }
 
     .option p {
-        font-size: var(--step-1);
+        font-size: var(--step-2);
+    }
+
+    .option .bulletPoint {
+        width: 2vw;
+        height: 2vw;
+        margin-right: 2vw;
     }
 
     .options h6, .DeliveryCode div p {
@@ -350,7 +356,7 @@
     }
 
     .DeliveryCode {
-        margin-top: 5%;
+        margin-top: 10%;
     }
 
     .DeliveryCode div {
@@ -362,7 +368,7 @@
         height: 20%;
 
         font-weight: 600;
-        font-size: var(--step-0);
+        font-size: var(--step-1);
     }
 
     .submitButtom {
@@ -370,34 +376,3 @@
     } 
 
 }
-/* 
-@media (max-width: 500px) {
-
-
-    .DeliveryInfo header, 
-    .DeliveryCompany header, 
-    .DeliveryCode header {
-        font-size: var(--step-2);
-    }
-
-    .DeliveryInfo p {
-        font-size: var(--step--1);
-    }
-
-    .option p {
-        font-size: var(--step-1);
-    }
-
-    .options h6, .DeliveryCode div p {
-        font-size: var(--step-0);
-    }
-        
-    .postalCode {
-        font-size: var(--step-0);
-    }
-
-    .submitButtom {
-        font-size: var(--step--1);
-    } 
-
-} */
