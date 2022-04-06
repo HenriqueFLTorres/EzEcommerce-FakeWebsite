@@ -39,6 +39,15 @@ Classnames
 
 ## Updates 🎉
 
+  #### V1.2 - (04/01 - 04/04) - Fixes
+  <br/>
+  - Cart Interface Done <br/>
+  - Design changes for responsiviness <br/>
+  - Product Page bug fixed <br/>
+  - Colapse category bar functionality <br/>
+  - Fixed some issues with firefox <br/>
+   <br/> <br/>
+   
   #### V1.1 - (03/30 - 03/31) - Cart 🛒
   <br/>
   - Added a new feature (Cart) <br/>
