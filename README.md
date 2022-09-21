@@ -39,7 +39,7 @@ Classnames
 
 ## Updates 🎉
 
-  #### V1.2 - (04/01 - 04/04) - Fixes
+  ### V1.2 - (04/01 - 04/04) - Fixes
   <br/>
   - Cart Interface Done <br/>
   - Design changes for responsiviness <br/>
@@ -48,7 +48,7 @@ Classnames
   - Fixed some issues with firefox <br/>
    <br/> <br/>
    
-  #### V1.1 - (03/30 - 03/31) - Cart 🛒
+  ### V1.1 - (03/30 - 03/31) - Cart 🛒
   <br/>
   - Added a new feature (Cart) <br/>
   - You can add multiple items to the cart and it will show you the total amount <br/>
@@ -56,7 +56,8 @@ Classnames
   <br/>
   <img width="40%" src="https://i.imgur.com/06R0qfi.png" />
   <br/><br/>
-  #### V1.0 - Launch
+  
+  ### V1.0 - Launch
   
   There is a lot to be added, but the user already can filter by price, category, or even rating. Since I chose to not use an API, all items need to be added by hand, but even with that difficulty, each item has a review section, specifications, about, and image carrousel...
 
